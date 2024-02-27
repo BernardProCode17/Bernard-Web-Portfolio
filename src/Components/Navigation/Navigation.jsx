@@ -16,9 +16,9 @@ function Navigation() {
             <li>
                <Link to="/about">About</Link>
             </li>
-            <li>
+            {/* <li>
                <Link to="/contact">Contact</Link>
-            </li>
+            </li> */}
          </ul>
       </nav>
 

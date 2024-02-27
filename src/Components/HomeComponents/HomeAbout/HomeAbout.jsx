@@ -1,12 +1,12 @@
 import Button from "../../Button/Button";
-import Jesus from '../../../Media Assets/Images/lord_jesus_1.jpg';
+import Portrait from '../../../Media Assets/Personal Images/bernard_portrait.jpg';
 function HomeAbout() {
 
    return (
       <section>
          <h2>About</h2>
          <section>
-            <img src={Jesus} alt="Portrait photo of me, posing professionally" />
+            <img src={Portrait} alt="Portrait photo of me, posing professionally" />
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem cupiditate quas fuga veritatis consequatur ipsam amet molestias qui eos totam quidem porro, modi iusto!</p>
          </section>

@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/wordmark_logo.png"
 function HeaderBar() {
 
    return (
