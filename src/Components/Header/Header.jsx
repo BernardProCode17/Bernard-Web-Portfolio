@@ -1,4 +1,4 @@
-import HomeWelcomeCard from "../HomePageWelcomeCard/HomeWelcomeCard";
+import HomeWelcomeCard from "../HomeComponents/HomePageWelcomeCard/HomeWelcomeCard";
 import Christ from "../../Media Assets/Images/christ_the_redeemer.jpg"
 import HeaderBar from "../HeaderBar/HeaderBar";
 

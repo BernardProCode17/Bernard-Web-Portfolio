@@ -27,6 +27,7 @@ function App() {
     <Router>
       {/* <Context.Provider value={header} > */}
       <Header/>
+      {/* {Header} */}
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/projects" Component={Projects} />
