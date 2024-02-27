@@ -1,0 +1,61 @@
+/* Code */
+coding - video
+office work - video
+Languages - image *******
+Web Developement - image/Video **
+Software Development - Video
+
+/* Food */
+burgers - video/images
+street food - videos/images 
+food - images 
+
+/* Cars */
+Skyline GTR
+Tuned Cars
+
+/* Church */
+Jesus Christ - Image
+Church - Video
+Church Family video/images
+Bible Study - Image/video
+Caring for church family - Images 
+
+/* Gym */
+gym workout
+Rowing mahine
+Running
+Vibration plate
+Weights
+
+/* Games */
+Citites Skylines
+Civilization
+Project Cars
+Need For Speed
+
+/* Shows and Movies  */
+Avatar: The Last Air Bender
+Fast and the Furious: 1, 2, tokoyo drift
+I am legend 
+Son of God
+
+/* Tech */
+PlayStation
+Xiaomi phones
+fitness tracker watch
+Laptop
+
+/* Locations */
+British Columbia
+Vancouver
+Pizza Shop
+Hamilton, ON
+
+/* Images and Photos */
+Mountains
+lakes
+landscapes
+roads 
+
+

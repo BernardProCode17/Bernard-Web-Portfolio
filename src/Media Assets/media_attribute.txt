@@ -1,0 +1,94 @@
+/** VIDEOS **/
+
+/* Coding 1 */
+Video by olia danilevich: https://www.pexels.com/video/close-up-view-of-a-person-using-a-laptop-4974884/
+
+/* Coding 2 */
+Video by olia danilevich: https://www.pexels.com/video/high-angle-shot-of-a-man-typing-on-laptop-4974886/
+
+/* Coding 3 */
+Video by Mikhail Nilov: https://www.pexels.com/video/person-holding-a-cup-7989839/
+
+/* Coding 4 */
+Video by Mikhail Nilov: https://www.pexels.com/video/a-man-typing-on-the-laptop-7989667/
+
+/* Work_Ofice*/
+Video by Kindel Media: https://www.pexels.com/video/people-in-the-meeting-7651772/
+
+/* Food_Compilation */
+https://youtu.be/5QtVsUgddvU?feature=shared
+
+/* Bible study */
+Video by Joel Dunn: https://www.pexels.com/video/an-open-book-2268807/
+
+/* Church Family */
+Video by Luis Quintero: https://www.pexels.com/video/20091986/
+
+/* Church worship Service */
+Video by Luis Quintero: https://www.pexels.com/video/people-in-a-prayer-meeting-2014792/
+
+/* project cars 2 trailer */
+https://youtu.be/LU8W83oDFg4?si=Y7KFolDPshS00O-A
+
+/* Avatar: The Last Airbender Trailer */
+https://youtu.be/ooVvH2IYz0w?si=VQDho1rYumVjciK2
+
+/** IMAGES **/
+
+/* Computer_office */
+Photo by picjumbo.com: https://www.pexels.com/photo/black-sunglasses-near-macbook-pro-and-ipad-196659/
+
+/* Desk Setup */
+Photo by picjumbo.com: https://www.pexels.com/photo/computer-desk-196658/
+
+/* Burger_1 */
+Photo by Vincent Rivaud: https://www.pexels.com/photo/french-fries-and-burgers-2233351/
+
+/* Burger_2 */
+Photo by Horizon Content: https://www.pexels.com/photo/close-up-photo-of-burger-3915906/
+
+/* Tuned_cars */
+Photo by <a href="https://unsplash.com/@jakobnoahrosen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jakob Rosen</a> on <a href="https://unsplash.com/photos/man-in-gray-jacket-standing-beside-blue-porsche-911-cDlfSriDVqQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+/* Nissan Skyline GTR R34 1 */
+Photo by WAVYVISUALS: https://www.pexels.com/photo/blue-nissan-skyline-18948393/
+
+/* Nissan Skyline GTR R34 2 */
+Photo by Sebastian Pichard: https://www.pexels.com/photo/photo-of-a-blue-nissan-skyline-car-12608882/
+
+/* Nissan Skyline GTR R34 3 */
+Photo by <a href="https://unsplash.com/@crymor?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Cry Mor</a> on <a href="https://unsplash.com/photos/a-group-of-cars-parked-next-to-each-other-KP3QN9D9lmU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+/* Lord Jesus 1 */
+Photo by Athena: https://www.pexels.com/photo/black-and-white-silhouette-of-christ-the-redeemer-1804177/
+
+/* Christ the Redeemer */
+Photo by 4FLY  RJ: https://www.pexels.com/photo/christ-the-redeemer-brazil-2818895/
+
+/* Church worship Service 1 */
+Photo by <a href="https://unsplash.com/@nate072107?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">NATHAN MULLET</a> on <a href="https://unsplash.com/photos/people-raising-their-hands-during-nighttime-i7ZSnmsEN-Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+/* Church Worship Service 2 */
+Photo by <a href="https://unsplash.com/@everythingcaptured?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Edward Cisneros</a> on <a href="https://unsplash.com/photos/religious-concert-performed-by-a-band-on-stage-QSa-uv4WJ0k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+/* Church Worship Service 3 */
+Photo by Luis Quintero: https://www.pexels.com/photo/grayscale-photography-of-people-raising-hands-2014775/
+
+/* treadmill */
+Photo by William Choquette: https://www.pexels.com/photo/an-on-treadmill-1954524/S
+
+/* workout */
+Photo by Victor Freitas: https://www.pexels.com/photo/person-holding-barbell-841130/
+
+/* rowing machine */
+Photo by Andres  Ayrton: https://www.pexels.com/photo/fit-man-doing-exercises-on-rowing-machine-6551414/
+
+/* playstation */
+Photo by <a href="https://unsplash.com/@nkachanovskyyy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nikita Kachanovsky</a> on <a href="https://unsplash.com/photos/white-sony-ps4-dualshock-controller-over-persons-palm-FJFPuE1MAOM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+/* vancouver */
+Photo by Adi K: https://www.pexels.com/photo/bird-s-eye-view-photography-of-high-rise-buildings-2382868/
+
+/* TTC */
+Photo by <a href="https://unsplash.com/@andre_furtado?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andre Furtado</a> on <a href="https://unsplash.com/photos/red-train-on-road-ZbTIXFqN29A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
