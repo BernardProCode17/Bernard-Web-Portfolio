@@ -9,6 +9,7 @@ import About from "../Pages/AboutPage/AboutPage";
 import Project from "../Pages/ProjectPage/ProjectPage";
 import Header from "../Components/Header/Header";
 import HeaderBar from "../Components/HeaderBar/HeaderBar";
+import Footer from "../Components/Footer/Footer";
 
 function App() {
   // const [header, setHeader] = useState(<Header />)
@@ -26,7 +27,7 @@ function App() {
   return (
     <Router>
       {/* <Context.Provider value={header} > */}
-      <Header/>
+      {/* <Header/> */}
       {/* {Header} */}
       <Routes>
         <Route path="/" Component={Home} />
@@ -36,6 +37,7 @@ function App() {
         <Route path="/about" Component={About} />
         <Route path="/contact" Component={Contact} />
       </Routes>
+      <Footer />
       {/* <Context.Provider/> */}
     </Router>
   )

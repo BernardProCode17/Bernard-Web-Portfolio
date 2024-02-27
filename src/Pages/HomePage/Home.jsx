@@ -7,12 +7,15 @@ import HomeSkills from "../../Components/HomeComponents/HomeSkills/HomeSkills";
 function Home() {
 
    return (
+      <>
+      <Header />
       <main>
          <HomeProject />
          <HomeSkills />
          <HomeAbout />
          <HomeContact />
       </main>
+      </>
    );
 }
 export default Home;
