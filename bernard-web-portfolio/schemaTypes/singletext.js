@@ -1,14 +1,15 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-   name: 'singleText',
-   title: 'Single Text',
+   name: 'singletext',
+   title: 'Text',
    type: 'document',
    fields: [
       defineField({
             name: 'textContent',
             title: 'Text Content',
-            type: 'blockContent'
+            type: 'string'
          })
-   ]
+   ],
+cla
 })
