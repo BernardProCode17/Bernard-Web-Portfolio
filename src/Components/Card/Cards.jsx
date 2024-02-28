@@ -1,6 +1,6 @@
 
 function Card({ projectData }) {
-   // console.log(projectData);
+   console.log(projectData);
    // console.log(projectData.project_name);
 
 // const { development_tools, project_name, short_description }  = projectData;
