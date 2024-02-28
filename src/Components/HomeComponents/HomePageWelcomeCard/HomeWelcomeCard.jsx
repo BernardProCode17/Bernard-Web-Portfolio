@@ -13,14 +13,15 @@ function HomeWelcomeCard() {
          })
          .catch(console.error);
    }, []);
+   
 
    console.log(text)
    return (
       <section>
-         <h1>{text[0]}</h1>
-         <p>{text[2]}</p>
+         <h1>{text[1]}</h1>
+         <p>{text[5]}</p>
+         <p>{text[9]}</p>
          <p>{text[3]}</p>
-         <p>{text[1]}</p>
       </section>
    )
 }

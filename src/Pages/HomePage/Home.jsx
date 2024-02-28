@@ -14,8 +14,7 @@ function Home() {
          <HomeProject />
          <HomeSkills />
          <HomeAbout />
-         <ContactComp/>
-         {/* <HomeContact /> */}
+         <HomeContact />
       </main>
       </>
    );
