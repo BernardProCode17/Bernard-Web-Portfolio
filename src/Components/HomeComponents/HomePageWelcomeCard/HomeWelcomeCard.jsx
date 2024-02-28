@@ -14,8 +14,6 @@ function HomeWelcomeCard() {
          .catch(console.error);
    }, []);
    
-
-   console.log(text)
    return (
       <section>
          <h1>{text[1]}</h1>

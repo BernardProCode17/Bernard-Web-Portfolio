@@ -1,11 +1,24 @@
-function Card(){
-   
-   return(
-      <article className="card">
-         <h3>Title</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui recusandae veritatis dolore itaque distinctio laudantium nobis nostrum cum excepturi eligendi adipisci nihil eveniet aperiam optio.</p>
-         
-      </article>
-   )
+
+function Card({ projectData }) {
+   // console.log(projectData);
+   // console.log(projectData.project_name);
+
+// const { development_tools, project_name, short_description }  = projectData;
+
+// if(!projectData){
+//    return <p>Loading...</p>;
+// }
+//   return (
+//     <article className="card">
+//       <h3>T{projectData.project_name}</h3>
+//       <p>{projectData.short_description}</p>
+
+//       <ul>
+//         {projectData.development_tools.map((tool, index) => {
+//           <li key={index}>{tool}</li>;
+//         })}
+//       </ul>
+//     </article>
+//   );
 }
 export default Card;
