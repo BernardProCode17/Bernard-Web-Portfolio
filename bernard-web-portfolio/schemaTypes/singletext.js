@@ -11,5 +11,4 @@ export default defineType({
             type: 'string'
          })
    ],
-cla
 })
