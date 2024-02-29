@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Card from "../../Components/Card/Cards";
+import ProjectCard from "../../Components/Card/ProjectCards";
 import ContactComp from "../../Components/Contact/Contact";
 import HeaderBar from "../../Components/HeaderBar/HeaderBar";
 
@@ -19,15 +19,15 @@ function Projects() {
 
             <section>
                <Link>
-                  <Card />
+                  <ProjectCard />
                </Link>
 
                <Link>
-                  <Card />
+                  <ProjectCard />
                </Link>
 
                <Link>
-                  <Card />
+                  <ProjectCard />
                </Link>
             </section>
 

@@ -1,4 +1,3 @@
-import ContactComp from "../../Components/Contact/Contact";
 import Header from "../../Components/Header/Header";
 import HomeAbout from "../../Components/HomeComponents/HomeAbout/HomeAbout";
 import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact";

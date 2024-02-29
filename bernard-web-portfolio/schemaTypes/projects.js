@@ -9,6 +9,14 @@ export default defineType({
       name: 'project_name',
       title: 'Project Name',
       type: 'string',
+    }),    
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'project_name',
+      }
     }),
     defineField({
       name: 'short_description',

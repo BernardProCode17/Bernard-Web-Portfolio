@@ -30,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" Component={Home} />
         <Route path="/projects" Component={Projects} />
-        <Route path="/project" Component={Project} />
+        <Route path="/project:slug" Component={Project} />
         <Route path="/skills" Component={Skills} />
         <Route path="/about" Component={About} />
         {/* <Route path="/contact" Component={Contact} /> */}

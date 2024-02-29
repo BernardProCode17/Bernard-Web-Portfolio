@@ -9,7 +9,7 @@ function Header() {
          {/* Container for Navigation and Logo */}
          <HeaderBar />
          <section>
-            <img src={headerImage} alt="Photo of me Bernard, posing professional with a smile" style={{width: '100', pointerEvents: 'none'}}/>
+            <img src={headerImage} alt="Photo of me Bernard, posing professional with a smile" style={{height: '500px', pointerEvents: 'none'}}/>
             <HomeWelcomeCard />
          </section>
 

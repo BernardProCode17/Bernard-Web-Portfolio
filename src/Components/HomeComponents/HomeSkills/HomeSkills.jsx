@@ -1,7 +1,7 @@
 import Client from '../../../Main Files/sanity';
 import { useEffect, useState } from "react"
 import Button from "../../Button/Button";
-import Card from "../../Card/Cards";
+import SkillsCard from "../../Card/SkillsCards";
 
 function HomeSkills() {
    const [text, setText] = useState([]);
@@ -23,12 +23,9 @@ function HomeSkills() {
          <p>{text[8]}</p>
 
          <section>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <SkillsCard />
          </section>
+         
          <Button title={'Skills'} URL={'/skills'} />
       </section>
    )

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../Button/Button";
-import Card from "../../Card/Cards";
+import ProjectCard from "../../Card/ProjectCards";
 import Client from "../../../Main Files/sanity";
 
 function HomeProject() {
@@ -17,21 +17,20 @@ function HomeProject() {
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const Q1 = `*[_type == 'projects'] {project_name, short_description, development_tools}`;
-        const data = await Client.fetch(Q1);
-        const projectData = data[0];
-        setShortProject(projectData);
-      } catch (error) {
-        console.error(error);
-      }
-    };
 
-    fetchData();
+    const Q1 = `*[_type == 'projects'] {project_name, short_description, development_tools, slug, project_image}`;
+
+    Client.fetch(Q1)
+    .then((data) => {
+      const projectData = data[0];
+      console.log(projectData)
+      setShortProject(projectData);
+    })
+    .catch(console.error);
+ 
   }, []);
 
-    console.log(shortProject);
+  console.log(shortProject)
 
   return (
     <section>
@@ -39,9 +38,9 @@ function HomeProject() {
       <p>{text[2]}</p>
 
       <section>
-        <Card projectData={shortProject} />
-        <Card />
-        <Card />
+        {/* {shortProject.map((item, index) => (
+          <ProjectCard key={index} shortProject={item} />
+        ))} */}
       </section>
 
       <Button title={"Projects"} URL={"/projects"} />

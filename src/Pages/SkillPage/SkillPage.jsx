@@ -1,4 +1,4 @@
-import Card from "../../Components/Card/Cards";
+import SkillsCard from "../../Components/Card/SkillsCards";
 import ContactComp from "../../Components/Contact/Contact";
 import HeaderBar from "../../Components/HeaderBar/HeaderBar";
 
@@ -15,7 +15,7 @@ function Skills() {
                <h1>Skills</h1>
                <p>Lorem ipsum dolor sit amet.</p>
             </section>
-
+            <SkillsCard />
             <section>
 
                <button>

@@ -1,4 +1,4 @@
-import {createClient} from '../Main Files/'
+import {createClient} from '@sanity/client'
 
 const client = createClient({
     projectId: 'k20v4h2a', 
