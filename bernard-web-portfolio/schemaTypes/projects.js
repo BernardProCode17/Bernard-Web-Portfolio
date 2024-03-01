@@ -1,9 +1,11 @@
 import {defineField, defineType} from 'sanity'
+import { IoFingerPrintOutline } from "react-icons/io5";
 
 export default defineType({
   name: 'projects',
   title: 'Projects',
   type: 'document',
+  icon: IoFingerPrintOutline,
   fields: [
     defineField({
       name: 'project_name',
