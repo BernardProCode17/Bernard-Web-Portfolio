@@ -50,6 +50,15 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'development_language',
+      title: 'Development Language',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        layout: 'tags',
+      },
+    }),
+    defineField({
       name: 'designDevelop',
       title: 'Design and Development Process',
       type: 'array',
@@ -67,13 +76,23 @@ export default defineType({
           fields: [
             {
               name: 'development',
-              title: 'Develoment',
+              title: 'Development',
               type: 'array',
               of: [{type: 'block'}]
             },
           ],
         },
       ],
+    }),
+    defineField({
+      name: 'project_link',
+      title: 'Link',
+      type: 'url'
+    }),
+    defineField({
+      name: 'github_link',
+      title: 'GitHub',
+      type: 'url'
     }),
   ],
 })

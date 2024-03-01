@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+// import {GlobalContext} from "../../../Context/GlobalContext";
 import Button from "../../Button/Button";
 import ProjectCard from "../../Card/ProjectCards";
 import Client from "../../../Main Files/sanity";
 
 function HomeProject() {
   const [text, setText] = useState([]);
-  const [shortProject, setShortProject] = useState();
+  const [shortProject, setShortProject] = useState([]);
+
+  // const {shortProject} = useContext(GlobalContext);
+  // console.log(shortProject)
 
   useEffect(() => {
     Client.fetch(`*[_type == "singletext"]`)
@@ -17,30 +21,33 @@ function HomeProject() {
   }, []);
 
   useEffect(() => {
-
-    const Q1 = `*[_type == 'projects'] {project_name, short_description, development_tools, slug, project_image}`;
+    const Q1 = `*[_type == 'projects' && short_description != null] 
+    {
+      project_name, 
+      short_description, 
+      slug, 
+      project_image,
+      'slug': slug.current    
+    }`;
 
     Client.fetch(Q1)
-    .then((data) => {
-      const projectData = data[0];
-      console.log(projectData)
-      setShortProject(projectData);
-    })
-    .catch(console.error);
- 
+      .then((data) => {
+        const projectData = data;
+        setShortProject(projectData);
+      })
+      .catch(console.error);
+
   }, []);
-
-  console.log(shortProject)
-
+  
   return (
     <section>
       <h2>{text[0]}</h2>
       <p>{text[2]}</p>
 
       <section>
-        {/* {shortProject.map((item, index) => (
+        {shortProject.slice(0, 3).map((item, index) => (
           <ProjectCard key={index} shortProject={item} />
-        ))} */}
+        ))}
       </section>
 
       <Button title={"Projects"} URL={"/projects"} />
