@@ -1,6 +1,6 @@
 import SkillsCard from "../../Components/Card/SkillsCards";
 import ContactComp from "../../Components/Contact/Contact";
-import HeaderBar from "../../Components/HeaderBar/HeaderBar";
+import HeaderBar from "../../Components/Header/Header";
 
 function Skills() {
 
@@ -19,43 +19,43 @@ function Skills() {
             <section>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
                <button>
-                  <Card />
+                  <SkillsCard />
                </button>
 
             </section>

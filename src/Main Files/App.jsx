@@ -6,14 +6,16 @@ import Skills from "../Pages/SkillPage/SkillPage";
 import About from "../Pages/AboutPage/AboutPage";
 import Project from "../Pages/ProjectPage/ProjectPage";
 import Footer from "../Components/Footer/Footer";
+import Header from "../Components/Header/Header";
 
 function App() {
 
   return (
     // <Context.Provider>
       <Router>
+        <Header/>
         <Routes>
-          <Route path="/" Component={Home} />
+          <Route exact path="/" Component={Home} />
           <Route path="/projects" Component={Projects} />
           <Route path="/project:slug" Component={Project} />
           <Route path="/skills" Component={Skills} />

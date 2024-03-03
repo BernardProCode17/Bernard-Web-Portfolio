@@ -2,8 +2,8 @@ import { defineField, defineType } from "sanity";
 import { IoLogoJavascript } from "react-icons/io";
 
 export default defineType({
-   name: 'lanuage',
-   title: 'Lanuage',
+   name: 'language',
+   title: 'Language',
    type: 'document',
    icon: IoLogoJavascript,
    fields: [
@@ -24,6 +24,11 @@ export default defineType({
          title: 'List Of Concepts',
          type: 'array',
          of: [{ type: 'string' }],
+      }),
+      defineField({
+         name: 'language_icon',
+         title: 'Logo',
+         type: 'image'
       }),
    ],
 })

@@ -1,5 +1,6 @@
 import Client from '../../../Main Files/sanity';
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom';
 import Button from "../../Button/Button";
 import SkillsCard from "../../Card/SkillsCards";
 
@@ -18,17 +19,18 @@ function HomeSkills() {
          .catch(console.error);
    }, []);
 
-   // useEffect(() => {
-   //    const Q1 = ;
-  
-   //    Client.fetch()
-   //      .then((data) => {
-   //        const projectData = data;
-   //        setShortSkill(projectData);
-   //      })
-   //      .catch(console.error);
-  
-   //  }, []);
+   useEffect(() => {
+      const S1 = `*[_type == 'language']{language_name,'icon': language_icon.asset._ref}`;
+
+      Client.fetch(S1)
+         .then((data) => {
+            const skillsData = data;
+            //  console.log(skillsData)
+            setShortSkills(skillsData);
+         })
+         .catch(console.error);
+
+   }, []);
 
    return (
       <section>
@@ -36,12 +38,14 @@ function HomeSkills() {
          <p>{text[8]}</p>
 
          <section>
-         {/* {.slice(0, 3).map((item, index) => (
-          <SkillsCard key={index} shortProject={item} />
-        ))} */}
+            <Link to={'/skills'}>
+               {shortSkills.slice(0, 3).map((item, index) => (
+                  <SkillsCard key={index} shortSkills={item} />
+               ))}
+            </Link>
          </section>
-         
-         <Button title={'Skills'} URL={'/skills'} />
+
+         <Link to={'/skills'}>Skills</Link>
       </section>
    )
 }

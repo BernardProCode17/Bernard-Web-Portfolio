@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState} from "react";
 // import {GlobalContext} from "../../../Context/GlobalContext";
 import Button from "../../Button/Button";
 import ProjectCard from "../../Card/ProjectCards";

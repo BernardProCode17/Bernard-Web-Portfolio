@@ -1,10 +1,13 @@
-function Card() {
+function Card({ shortSkills }) {
+
+   const { language_name, icon } = shortSkills
 
    return (
       <article className="card">
-         <h3>project_name</h3>
-         <p>short_description</p>
-
+         <h3>{language_name}</h3>
+         <p></p>
+         <img src={icon} alt="" />
+         
          <ul>
 
          </ul>

@@ -1,6 +1,6 @@
-import HeaderBar from '../../Components/HeaderBar/HeaderBar';
+import HeaderBar from '../../Components/Header/Header';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo.jpg'
-import ContactComp from '../../Components/Contact/Contact';  
+import ContactComp from '../../Components/Contact/Contact';
 
 function About() {
 
@@ -36,7 +36,7 @@ function About() {
                </section>
             </section>
 
-            <ContactComp/>
+            <ContactComp />
          </main>
       </>
    )

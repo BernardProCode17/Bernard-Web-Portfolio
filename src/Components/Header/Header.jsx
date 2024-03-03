@@ -1,20 +1,15 @@
-import HomeWelcomeCard from "../HomeComponents/HomePageWelcomeCard/HomeWelcomeCard";
-import headerImage from "../../Media Assets/Personal Images/bernard_header_photo.jpg"
-import HeaderBar from "../HeaderBar/HeaderBar";
-
+import Navigation from "../Navigation/Navigation";
+import { Link } from "react-router-dom";
+import logo from "../../assets/wordmark_logo.png"
 function Header() {
 
    return (
       <header>
-         {/* Container for Navigation and Logo */}
-         <HeaderBar />
-         <section>
-            <img src={headerImage} alt="Photo of me Bernard, posing professional with a smile" style={{height: '500px', pointerEvents: 'none'}}/>
-            <HomeWelcomeCard />
-         </section>
-
-
+         <Navigation />
+         <Link to="/">
+            <img src={logo} alt="Logo of Bernard brand - The word 'Bernard'" style={{ height: '170px' }} />
+         </Link>
       </header>
    )
 }
-export default Header;
+export default Header

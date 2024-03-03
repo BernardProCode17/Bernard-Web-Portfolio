@@ -21,7 +21,7 @@ function HomeAbout() {
       <section>
          <h2>{text[6]}</h2>
          <section>
-            <img src={Portrait} alt="Portrait photo of me, posing professionally" />
+            <img src={Portrait} alt="Portrait photo of me, posing professionally" style={{width: '100px'}}/>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem cupiditate quas fuga veritatis consequatur ipsam amet molestias qui eos totam quidem porro, modi iusto!</p>
          </section>

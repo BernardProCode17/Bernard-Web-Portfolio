@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../../Components/Card/ProjectCards";
 import ContactComp from "../../Components/Contact/Contact";
-import HeaderBar from "../../Components/HeaderBar/HeaderBar";
+import HeaderBar from "../../Components/Header/Header";
 
 function Projects() {
+
+   useEffect(() => {
+      document.title = 'Project - Bernard Web Portfolio';
+   }, [])
 
    return (
       <>
@@ -12,6 +17,7 @@ function Projects() {
          </header>
 
          <main>
+
             <section>
                <h1>Projects</h1>
                <p>Lorem ipsum dolor sit amet.</p>

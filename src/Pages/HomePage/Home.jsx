@@ -1,4 +1,4 @@
-import Header from "../../Components/Header/Header";
+import HomeBanner from "../../Components/HomeComponents/HomeBanner/HomeBanner";
 import HomeAbout from "../../Components/HomeComponents/HomeAbout/HomeAbout";
 import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact";
 import HomeProject from "../../Components/HomeComponents/HomeProjects/HomeProject";
@@ -8,13 +8,13 @@ function Home() {
 
    return (
       <>
-      <Header />
-      <main>
-         <HomeProject />
-         <HomeSkills />
-         <HomeAbout />
-         <HomeContact />
-      </main>
+         <main>
+            <HomeBanner />
+            <HomeProject />
+            <HomeSkills />
+            <HomeAbout />
+            <HomeContact />
+         </main>
       </>
    );
 }
