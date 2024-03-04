@@ -6,15 +6,15 @@ import Client from "../../../Main Files/sanity";
 
 function HomeProject() {
   const [text, setText] = useState([]);
-
   useEffect(() => {
-    Client.fetch(`*[_type == "singletext"]`)
-      .then((data) => {
-        const textValue = data.map((item) => item.textContent);
-        setText(textValue);
-      })
-      .catch(console.error);
+    Client.fetch(`*[_type == "singletext"]{textContent, _id}`)
+    .then((data) => {
+      const textValue = data.map((item) => ({text: item.textContent, id: item._id}));
+      setText(textValue);
+    })
+    .catch(console.error);
   }, []);
+  console.log(text)
   
   return (
     <section>

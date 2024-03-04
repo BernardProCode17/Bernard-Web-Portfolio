@@ -5,6 +5,8 @@ const GlobalContext = createContext();
 
 function Context({ children }) {
 
+   /* Create a function outside of the global context to do the fetch */
+
    //Language Skills State
    const [language, setLanguage] = useState([])
    useEffect(() => {
@@ -20,7 +22,7 @@ function Context({ children }) {
 
    }, []);
 
-   
+
    return (
       <GlobalContext.Provider value={{ language }}>
          {children}

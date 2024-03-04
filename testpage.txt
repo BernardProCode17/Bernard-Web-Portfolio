@@ -1,0 +1,4 @@
+- facet component
+- facet schema type
+- facet data
+- render the facet on the the skills page
