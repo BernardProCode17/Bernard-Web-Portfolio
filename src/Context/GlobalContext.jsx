@@ -14,36 +14,27 @@ function Context({ children }) {
       {language_name, 'icon': language_icon.asset._ref}`;
 
       Client.fetch(languageQuery)
-         .then((data) => {
-            const languageData = data;
-            setLanguage(languageData);
-         })
-         .catch(console.error);
-
+      .then((data) => setLanguage(data))
+      .catch(console.error);
+      
    }, []);
 
    //Facet Fetch
    const [facet, setFacet] = useState([])
    useEffect(() => {
-      const languageQuery = `*[_type == 'facets']
+      const facetQuery = `*[_type == 'facets']
       {
         development,
         language,
         design
       }`;
 
-      Client.fetch(languageQuery)
-         .then((data) => {
-            const facetData = data;
-            console.log(facetData)
-            setFacet(facetData);
-         })
+      Client.fetch(facetQuery)
+         .then((data) => setFacet(data))
          .catch(console.error);
-   }, [])
-
-   console.log(facet)
+      }, [])
    return (
-      <GlobalContext.Provider value={{ language }}>
+      <GlobalContext.Provider value={{ language, facet }}>
          {children}
       </GlobalContext.Provider>
    )

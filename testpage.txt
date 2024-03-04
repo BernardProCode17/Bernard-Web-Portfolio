@@ -2,3 +2,29 @@
 - facet schema type
 - facet data
 - render the facet on the the skills page
+
+
+// Code Reference 
+
+const groupedFacets = facet.reduce((acc, item) => {
+      const key = Object.keys(item)[0];
+      if (!acc[key]) {
+         acc[key] = [];
+      }
+      acc[key].push(Object.values(item)[0]);
+      return acc;
+   }, {});
+
+{
+   facet.map((item, index) => {
+      const key = Object.keys(item)[0];
+      const value = Object.values(item)[0];
+      return (
+         <div key={index}>
+            <button>{key}</button>
+            <p>{value}</p>
+         </div>
+      );
+   })
+}
+

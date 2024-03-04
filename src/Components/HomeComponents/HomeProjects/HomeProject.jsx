@@ -9,13 +9,13 @@ function HomeProject() {
   useEffect(() => {
     Client.fetch(`*[_type == "singletext"]{textContent, _id}`)
     .then((data) => {
-      const textValue = data.map((item) => ({text: item.textContent, id: item._id}));
+      const textValue = data.map((item) => item.textContent);
+      // const textValue = data.map((item) => ({text: item.textContent, id: item._id}));
       setText(textValue);
     })
     .catch(console.error);
   }, []);
-  console.log(text)
-  
+ 
   return (
     <section>
       <h2>{text[0]}</h2>

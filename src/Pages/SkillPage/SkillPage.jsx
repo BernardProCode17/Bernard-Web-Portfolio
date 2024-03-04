@@ -9,7 +9,7 @@ function Skills() {
          <main>
             <section>
                <h1>Skills</h1>
-               <p>Lorem ipsum dolor sit amet.</p>
+               <p>View My featured Career Skills</p>
             </section>
 
             <section>
