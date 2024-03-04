@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import { Context } from "../Context/GlobalContext";
+import { Context } from "../Context/GlobalContext";
 import Home from "../Pages/HomePage/Home";
 import Projects from "../Pages/ProjectsPage/ProjectsPage";
 import Skills from "../Pages/SkillPage/SkillPage";
@@ -11,9 +11,9 @@ import Header from "../Components/Header/Header";
 function App() {
 
   return (
-    // <Context.Provider>
+    <Context>
       <Router>
-        <Header/>
+        <Header />
         <Routes>
           <Route exact path="/" Component={Home} />
           <Route path="/projects" Component={Projects} />
@@ -23,7 +23,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    // </Context.Provider>
+    </Context>
   )
 }
 

@@ -1,13 +1,16 @@
 import Client from '../../../Main Files/sanity';
-import { useEffect, useState } from "react"
+import {useEffect, useState } from "react"
 import { Link } from 'react-router-dom';
-import Button from "../../Button/Button";
-import SkillsCard from "../../Card/SkillsCards";
+import SkillsCardHome from "../../Card/SkillsCardHome";
+// import { GlobalContext } from '../../../Context/GlobalContext';
 
 function HomeSkills() {
-   const [text, setText] = useState([]);
-   const [shortSkills, setShortSkills] = useState([])
 
+   // ************
+   /* Add the Global Context */
+   const [text, setText] = useState([]);
+   // const language = useContext(GlobalContext)
+   // ************
 
    useEffect(() => {
       Client
@@ -19,19 +22,6 @@ function HomeSkills() {
          .catch(console.error);
    }, []);
 
-   useEffect(() => {
-      const S1 = `*[_type == 'language']{language_name,'icon': language_icon.asset._ref}`;
-
-      Client.fetch(S1)
-         .then((data) => {
-            const skillsData = data;
-            //  console.log(skillsData)
-            setShortSkills(skillsData);
-         })
-         .catch(console.error);
-
-   }, []);
-
    return (
       <section>
          <h2>{text[7]}</h2>
@@ -39,9 +29,7 @@ function HomeSkills() {
 
          <section>
             <Link to={'/skills'}>
-               {shortSkills.slice(0, 3).map((item, index) => (
-                  <SkillsCard key={index} shortSkills={item} />
-               ))}
+               <SkillsCardHome />
             </Link>
          </section>
 

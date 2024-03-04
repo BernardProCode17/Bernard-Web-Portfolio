@@ -1,4 +1,3 @@
-import HeaderBar from '../../Components/Header/Header';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo.jpg'
 import ContactComp from '../../Components/Contact/Contact';
 
@@ -6,7 +5,6 @@ function About() {
 
    return (
       <>
-         <HeaderBar />
          <main>
             <h1>About</h1>
             {/* section 1 */}
@@ -19,7 +17,9 @@ function About() {
             </section>
 
             {/* Section 2 - Image Gallery */}
-            <section>
+            {/* use the picture tag to render the pictures */}
+            {/* Refactor the HTML */}
+            {/* <section>
                <section>
                   <img src="" alt="" />
                   <img src="" alt="" />
@@ -34,7 +34,7 @@ function About() {
                   <img src="" alt="" />
                   <img src="" alt="" />
                </section>
-            </section>
+            </section> */}
 
             <ContactComp />
          </main>

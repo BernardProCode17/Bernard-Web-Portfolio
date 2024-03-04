@@ -19,7 +19,7 @@ function HomeAbout() {
 
    return (
       <section>
-         <h2>{text[6]}</h2>
+         <h2>About</h2>
          <section>
             <img src={Portrait} alt="Portrait photo of me, posing professionally" style={{width: '100px'}}/>
 

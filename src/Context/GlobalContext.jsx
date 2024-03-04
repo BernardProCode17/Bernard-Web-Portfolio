@@ -1,36 +1,30 @@
 import { createContext, useState, useEffect } from "react";
-import Client from "../../src/Main Files/sanity";
-export const GlobalContext = createContext({});
+import Client from "../Main Files/sanity";
 
-export const Context = ({children}) => {
-   const [shortProject, setShortProject] = useState();
+const GlobalContext = createContext();
 
+function Context({ children }) {
+
+   //Language Skills State
+   const [language, setLanguage] = useState([])
    useEffect(() => {
-      // const Q1 = `*[_type == 'projects'] {project_name, short_description, development_tools, slug, project_image}`;
-      // Removed the unused variable Q1
+      const languageQuery = `*[_type == 'language']
+      {language_name, 'icon': language_icon.asset._ref}`;
 
-      // Removed the declaration of Q1 since it is not being used
-
-
-      const Q2 = `*[_type == 'projects' && project_name == 'Student Administration Portal']
-         {'featuredText': featured_description[0].children[0].text}`
-
-         Client.fetch(Q2)
+      Client.fetch(languageQuery)
          .then((data) => {
-            const projectData = data[0];
-            console.log(typeof projectData)
-            setShortProject(projectData);
+            const languageData = data;
+            setLanguage(languageData);
          })
          .catch(console.error);
 
    }, []);
 
-   console.log(shortProject)
-
+   
    return (
-      <GlobalContext.Provider value={{ shortProject }}>
+      <GlobalContext.Provider value={{ language }}>
          {children}
       </GlobalContext.Provider>
    )
 }
-
+export { GlobalContext, Context }

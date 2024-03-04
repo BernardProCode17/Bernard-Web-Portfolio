@@ -1,17 +1,28 @@
-function Card({ shortSkills }) {
+import { useContext, useState } from "react";
+import { GlobalContext } from "../../Context/GlobalContext";
 
-   const { language_name, icon } = shortSkills
+function SkillsCard() {
+   const language = useContext(GlobalContext);
+   const [selectedItem, setSelectedItem] = useState(null);
+
+   function dropDownToggle(index) {
+      setSelectedItem(selectedItem === index ? null : index);
+   }
 
    return (
-      <article className="card">
-         <h3>{language_name}</h3>
-         <p></p>
-         <img src={icon} alt="" />
-         
-         <ul>
+      <>
+         {language.language.map((lang, index) => (
+            <button key={index} onClick={() => dropDownToggle(index)}>
 
-         </ul>
-      </article>
+               <article className="card">
+                  <h3>{lang.language_name}</h3>
+                  {selectedItem === index && <p>This for drop down</p>}
+                  {/* <img src={icon} alt="" /> */}
+               </article>
+               
+            </button>
+         ))}
+      </>
    );
 }
-export default Card;
+export default SkillsCard;
