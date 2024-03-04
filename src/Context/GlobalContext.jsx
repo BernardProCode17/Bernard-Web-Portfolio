@@ -7,7 +7,7 @@ function Context({ children }) {
 
    /* Create a function outside of the global context to do the fetch */
 
-   //Language Skills State
+   //Language Fetch
    const [language, setLanguage] = useState([])
    useEffect(() => {
       const languageQuery = `*[_type == 'language']
@@ -22,7 +22,26 @@ function Context({ children }) {
 
    }, []);
 
+   //Facet Fetch
+   const [facet, setFacet] = useState([])
+   useEffect(() => {
+      const languageQuery = `*[_type == 'facets']
+      {
+        development,
+        language,
+        design
+      }`;
 
+      Client.fetch(languageQuery)
+         .then((data) => {
+            const facetData = data;
+            console.log(facetData)
+            setFacet(facetData);
+         })
+         .catch(console.error);
+   }, [])
+
+   console.log(facet)
    return (
       <GlobalContext.Provider value={{ language }}>
          {children}
