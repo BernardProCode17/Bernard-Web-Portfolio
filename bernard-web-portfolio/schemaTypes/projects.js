@@ -1,6 +1,5 @@
 import {defineField, defineType} from 'sanity'
 import { IoFingerPrintOutline } from "react-icons/io5";
-import schemaID from '../../src/Functions/schemaID'
 
 export default defineType({
   name: 'projects',
@@ -12,12 +11,7 @@ export default defineType({
       name: 'project_name',
       title: 'Project Name',
       type: 'string',
-    }),    
-    defineField({
-      name: 'project_id',
-      title: 'Project Name',
-      type: 'string',
-    }),    
+    }),   
     defineField({
       name: 'slug',
       title: 'Slug',
