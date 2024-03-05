@@ -1,27 +1,16 @@
-import Client from '../../../Main Files/sanity';
-import { useEffect, useState } from "react"
+import { useContext } from "react"
+import { GlobalContext } from '../../../Context/GlobalContext';
 import Button from "../../Button/Button";
 import Portrait from '../../../Media Assets/Personal Images/bernard_portrait.jpg';
+
 function HomeAbout() {
-
-   const [text, setText] = useState([]);
-
-
-   useEffect(() => {
-      Client
-         .fetch(`*[_type == "singletext"]`)
-         .then(data => {
-            const textValue = data.map(item => item.textContent);
-            setText(textValue);
-         })
-         .catch(console.error);
-   }, []);
-
+   const { homeText } = useContext(GlobalContext)
    return (
       <section>
-         <h2>About</h2>
+         <h2>{homeText[0][8].textContent}</h2>
+         <p>{homeText[0][9].textContent}</p>
          <section>
-            <img src={Portrait} alt="Portrait photo of me, posing professionally" style={{width: '100px'}}/>
+            <img src={Portrait} alt="Portrait photo of me, posing professionally" style={{ width: '100px' }} />
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem cupiditate quas fuga veritatis consequatur ipsam amet molestias qui eos totam quidem porro, modi iusto!</p>
          </section>

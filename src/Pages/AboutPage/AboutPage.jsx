@@ -7,7 +7,7 @@ function About() {
 
    useEffect(() => {
       document.title = 'About - Bernard Web Portfolio';
-    }, [])
+   }, [])
 
    return (
       <>
@@ -22,25 +22,28 @@ function About() {
                </article>
             </section>
 
-            {/* Section 2 - Image Gallery */}
-            {/* use the picture tag to render the pictures */}
-            {/* Refactor the HTML */}
-            {/* <section>
+            <div>
+
+               {/* Section 2 - Image Gallery */}
+               {/* use the picture tag to render the pictures */}
+               {/* Refactor the HTML */}
+               {/* <section>
                <section>
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
-                  <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
+               <img src="" alt="" />
                </section>
             </section> */}
+            </div>
 
             <ContactComp />
          </main>

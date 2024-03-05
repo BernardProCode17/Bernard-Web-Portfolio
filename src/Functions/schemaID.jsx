@@ -8,7 +8,11 @@ function SchemaID() {
        const randomIndex = Math.floor(Math.random() * Character.length);
        id += Character[randomIndex];
    }
-   console.log(id)
+   
+   if(!isNaN(parseInt(id[0]))){
+    id = 'BWP' + id.slice(1);
+   }
+
    return id;
 }
  export default SchemaID

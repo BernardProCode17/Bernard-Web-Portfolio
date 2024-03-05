@@ -1,25 +1,16 @@
-import { useEffect, useState } from "react";
-import Client from '../../../Main Files/sanity'
+import { useContext } from "react";
+import { GlobalContext } from "../../../Context/GlobalContext";
+
 
 function HomeWelcomeCard() {
-   const [text, setText] = useState([]);
-
-   useEffect(() => {
-      Client
-         .fetch(`*[_type == "singletext"]`)
-         .then(data => {
-            const textValue = data.map(item => item.textContent);
-            setText(textValue);
-         })
-         .catch(console.error);
-   }, []);
-   
+   const { homeText } = useContext(GlobalContext)
+   console.log(homeText[0])
    return (
       <section>
-         <h1>{text[1]}</h1>
-         <p>{text[5]}</p>
-         <p>{text[9]}</p>
-         <p>{text[3]}</p>
+         <h1>{homeText[0][0].textContent}</h1>
+         <p>{homeText[0][1].textContent}</p>
+         <p>{homeText[0][2].textContent}</p>
+         <p>{homeText[0][3].textContent}</p>
       </section>
    )
 }

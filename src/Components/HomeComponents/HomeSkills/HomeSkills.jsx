@@ -1,31 +1,16 @@
-import Client from '../../../Main Files/sanity';
-import {useEffect, useState } from "react"
+
+import { useContext } from "react"
 import { Link } from 'react-router-dom';
 import SkillsCardHome from "../../Card/SkillsCardHome";
-// import { GlobalContext } from '../../../Context/GlobalContext';
+import { GlobalContext } from '../../../Context/GlobalContext';
 
 function HomeSkills() {
-
-   // ************
-   /* Add the Global Context */
-   const [text, setText] = useState([]);
-   // const language = useContext(GlobalContext)
-   // ************
-
-   useEffect(() => {
-      Client
-         .fetch(`*[_type == "singletext"]`)
-         .then(data => {
-            const textValue = data.map(item => item.textContent);
-            setText(textValue);
-         })
-         .catch(console.error);
-   }, []);
-
+   const {homeText} = useContext(GlobalContext)
+  console.table(homeText)
    return (
       <section>
-         <h2>{text[7]}</h2>
-         <p>{text[8]}</p>
+         <h2>{homeText[0][6].textContent}</h2>
+         <p>{homeText[0][7].textContent}</p>
 
          <section>
             <Link to={'/skills'}>
@@ -33,7 +18,7 @@ function HomeSkills() {
             </Link>
          </section>
 
-         <Link to={'/skills'}>Skills</Link>
+         <Link to={'/skills'}>p</Link>
       </section>
    )
 }

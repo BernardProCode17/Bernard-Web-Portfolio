@@ -7,6 +7,19 @@ function Context({ children }) {
 
    /* Create a function outside of the global context to do the fetch */
 
+   // Home Page Text Fetch
+   const [homeText, setHomeText] = useState([]);
+   useEffect(() => {
+      Client.fetch(`*[_type == "singletext"]`)
+         .then((data) => {
+            const textValue = data.map((item) => item.textContent);
+            setHomeText(textValue);
+         })
+         .catch(console.error);
+   }, []);
+
+
+
    //Language Fetch
    const [language, setLanguage] = useState([])
    useEffect(() => {
@@ -63,7 +76,7 @@ function Context({ children }) {
 
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText }}>
          {children}
       </GlobalContext.Provider>
    )

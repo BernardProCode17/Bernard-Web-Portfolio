@@ -1,25 +1,14 @@
-import Client from '../../../Main Files/sanity';
-import { useEffect, useState } from "react"
-import Button from "../../Button/Button";
+import { useContext } from "react"
+import { GlobalContext } from '../../../Context/GlobalContext'
 import ContactComp from "../../Contact/Contact";
 
 function HomeContact() {
-   const [text, setText] = useState([]);
-
-   useEffect(() => {
-      Client
-         .fetch(`*[_type == "singletext"]`)
-         .then(data => {
-            const textValue = data.map(item => item.textContent);
-            setText(textValue);
-         })
-         .catch(console.error);
-   }, []);
-
+   const { homeText } = useContext(GlobalContext)
+   console.table(homeText)
    return (
       <section>
-         <h2>{text[4]}</h2>
-         <p>Please Get in Contact with us</p>
+         <h2>{homeText[0][10].textContent}</h2>
+         <p>{homeText[0][11].textContent}</p>
          <ContactComp />
       </section>
    )
