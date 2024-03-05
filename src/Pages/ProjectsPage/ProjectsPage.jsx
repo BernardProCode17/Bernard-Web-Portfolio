@@ -5,9 +5,9 @@ import ContactComp from "../../Components/Contact/Contact";
 
 function Projects() {
 
-   // useEffect(() => {
-   //    document.title = 'Project - Bernard Web Portfolio';
-   // }, [])
+   useEffect(() => {
+      document.title = 'Projects - Bernard Web Portfolio';
+    }, [])
 
    return (
 

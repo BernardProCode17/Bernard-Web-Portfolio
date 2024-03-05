@@ -1,29 +1,10 @@
+import { useContext} from "react";
+import { GlobalContext } from "../../Context/GlobalContext";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Client from "../../Main Files/sanity";
 
 function Card() {
-   const [shortProject, setShortProject] = useState([]);
 
-   useEffect(() => {
-      const Q1 = `*[_type == 'projects' && short_description != null] 
-      {
-         project_name, 
-         short_description, 
-         slug, 
-         project_image,
-         'slug': slug.current    
-      }`;
-
-      Client.fetch(Q1)
-         .then((data) => {
-            const projectData = data;
-            setShortProject(projectData);
-         })
-         .catch(console.error);
-
-   }, []);
-
+const {shortProject} = useContext(GlobalContext)
 
    return (
       <>

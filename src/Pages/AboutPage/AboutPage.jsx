@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo.jpg'
 import ContactComp from '../../Components/Contact/Contact';
 
 function About() {
+
+
+   useEffect(() => {
+      document.title = 'About - Bernard Web Portfolio';
+    }, [])
 
    return (
       <>

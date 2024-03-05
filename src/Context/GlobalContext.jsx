@@ -14,9 +14,9 @@ function Context({ children }) {
       {language_name, 'icon': language_icon.asset._ref}`;
 
       Client.fetch(languageQuery)
-      .then((data) => setLanguage(data))
-      .catch(console.error);
-      
+         .then((data) => setLanguage(data))
+         .catch(console.error);
+
    }, []);
 
    //Facet Fetch
@@ -32,9 +32,38 @@ function Context({ children }) {
       Client.fetch(facetQuery)
          .then((data) => setFacet(data))
          .catch(console.error);
-      }, [])
+   }, [])
+
+   // Project Fetch
+   const [shortProject, setShortProject] = useState([]);
+   useEffect(() => {
+      const Q1 = `*[_type == 'projects']
+      {
+        project_name,
+        'slug': slug.current,
+        short_description,
+        'long_description': long_description[].children,
+        'featured_description': featured_description[].children[],
+        'project_image': project_image.asset._ref,
+        development_tools,
+        development_language,
+        designDevelop,
+        project_link,
+        github_link
+      }`;
+
+      Client.fetch(Q1)
+         .then((data) => {
+            const projectData = data;
+            setShortProject(projectData);
+         })
+         .catch(console.error);
+
+   }, []);
+
+
    return (
-      <GlobalContext.Provider value={{ language, facet }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject }}>
          {children}
       </GlobalContext.Provider>
    )
