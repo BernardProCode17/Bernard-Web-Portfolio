@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default defineType({
-  name: 'Paragraph',
+  name: 'paragraph',
   title: 'Paragraph',
   type: 'document',
   icon: IoDocumentTextOutline,

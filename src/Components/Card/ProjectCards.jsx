@@ -6,6 +6,7 @@ function Card() {
 
 const {shortProject} = useContext(GlobalContext)
 
+// console.log(shortProject)
    return (
       <>
          {shortProject.map((project, index) => (

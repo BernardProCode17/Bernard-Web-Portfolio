@@ -7,10 +7,10 @@ function HomeWelcomeCard() {
 
    return (
       <section>
-         <h1>{homeText[3][0].textContent}</h1>
+         {/* <h1>{homeText[3][0].textContent}</h1>
          <p>{homeText[3][1].textContent}</p>
          <p>{homeText[3][2].textContent}</p>
-         <p>{homeText[3][3].textContent}</p>
+         <p>{homeText[3][3].textContent}</p> */}
       </section>
    )
 }

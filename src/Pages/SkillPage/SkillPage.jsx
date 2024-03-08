@@ -6,7 +6,6 @@ import Facets from "../../Components/Facets/Facets";
 
 function Skills() {
    const { homeText } = useContext(GlobalContext)
-   console.table(homeText)
 
    useEffect(() => {
       document.title = 'Skills - Bernard Web Portfolio';
@@ -16,8 +15,8 @@ function Skills() {
       <>
          <main>
             <section>
-               <h1>{homeText[1][0].textContent}</h1>
-               <p>{homeText[1][1].textContent}</p>
+               {/* <h1>{homeText[1][0].textContent}</h1> 
+               <p>{homeText[1][1].textContent}</p> */}
             </section>
 
             <section>

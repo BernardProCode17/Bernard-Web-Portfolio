@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import Client from "../Main Files/sanity";
+import ImageUrlBuilder from "@sanity/image-url";
 
 const GlobalContext = createContext();
 
@@ -17,8 +18,17 @@ function Context({ children }) {
          })
          .catch(console.error);
    }, []);
-   console.log(homeText)
 
+   // About Page Article 
+   const [about, setAbout] = useState([])
+   useEffect(() => {
+      Client.fetch(`*[_type == 'paragraph']{'textBody': body[].children[].text}`)
+         .then((aboutText) => {
+            setAbout(aboutText)
+         })
+         .catch(console.error);
+   }, [])
+   console.log(about)
 
    //Language Fetch
    const [language, setLanguage] = useState([])
@@ -74,9 +84,14 @@ function Context({ children }) {
 
    }, []);
 
+   // Sanity Image URl Builder
+   const builder = ImageUrlBuilder(Client)
+   function urlFor(source) {
+      return builder.image(source)
+   }
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject, homeText }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, urlFor }}>
          {children}
       </GlobalContext.Provider>
    )
