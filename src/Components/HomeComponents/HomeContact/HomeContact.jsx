@@ -7,8 +7,8 @@ function HomeContact() {
    console.table(homeText)
    return (
       <section>
-         <h2>{homeText[0][10].textContent}</h2>
-         <p>{homeText[0][11].textContent}</p>
+         <h2>{homeText[3][10].textContent}</h2>
+         <p>{homeText[3][11].textContent}</p>
          <ContactComp />
       </section>
    )

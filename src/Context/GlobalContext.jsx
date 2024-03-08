@@ -17,7 +17,7 @@ function Context({ children }) {
          })
          .catch(console.error);
    }, []);
-
+   console.log(homeText)
 
 
    //Language Fetch

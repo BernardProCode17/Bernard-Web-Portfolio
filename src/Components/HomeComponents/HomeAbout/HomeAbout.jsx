@@ -7,8 +7,8 @@ function HomeAbout() {
    const { homeText } = useContext(GlobalContext)
    return (
       <section>
-         <h2>{homeText[0][8].textContent}</h2>
-         <p>{homeText[0][9].textContent}</p>
+         <h2>{homeText[3][8].textContent}</h2>
+         <p>{homeText[3][9].textContent}</p>
          <section>
             <img src={Portrait} alt="Portrait photo of me, posing professionally" style={{ width: '100px' }} />
 
