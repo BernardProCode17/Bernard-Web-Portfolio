@@ -22,7 +22,7 @@ function Context({ children }) {
    // About Page Article 
    const [about, setAbout] = useState([])
    useEffect(() => {
-      Client.fetch(`*[_type == 'paragraph']{'textBody': body[].children[].text}`)
+      Client.fetch(`*[_type == 'paragraph']{'About':body[].children[].text}`)
          .then((aboutText) => {
             setAbout(aboutText)
          })
