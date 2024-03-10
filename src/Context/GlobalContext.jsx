@@ -11,93 +11,125 @@ function Context({ children }) {
    // Home Page Text Fetch
    const [homeText, setHomeText] = useState([]);
    useEffect(() => {
-      Client.fetch(`*[_type == "singletext"]`)
-         .then((data) => {
+      const fetchHomeText = async () => {
+         try {
+            const data = await Client.fetch(`*[_type == "singletext"]`);
             const textValue = data.map((item) => item.textContent);
             setHomeText(textValue);
-         })
-         .catch(console.error);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchHomeText();
    }, []);
 
    // About Page Article 
-   const [about, setAbout] = useState([])
+   const [about, setAbout] = useState([]);
    useEffect(() => {
-      Client.fetch(`*[_type == 'paragraph']{'About':body[].children[].text}`)
-         .then((aboutText) => {
-            setAbout(aboutText)
-         })
-         .catch(console.error);
-   }, [])
+      const fetchAbout = async () => {
+         try {
+            const aboutText = await Client.fetch(`*[_type == 'paragraph']{'About':body[].children[].text}`);
+            setAbout(aboutText);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchAbout();
+   }, []);
 
    //Language Fetch
-   const [language, setLanguage] = useState([])
+   const [language, setLanguage] = useState([]);
    useEffect(() => {
-      const languageQuery = `*[_type == 'language']
-      {language_name, 'icon': language_icon.asset._ref}`;
+      const fetchLanguage = async () => {
+         try {
+            const languageQuery = 
+            `*[_type == 'language']
+            {
+               language_name,
+               language_icon,
+               language_list,
+               language_alt
+            }`;
 
-      Client.fetch(languageQuery)
-         .then((data) => setLanguage(data))
-         .catch(console.error);
-
+            const data = await Client.fetch(languageQuery);
+            setLanguage(data);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchLanguage();
    }, []);
 
    //Facet Fetch
-   const [facet, setFacet] = useState([])
+   const [facet, setFacet] = useState([]);
    useEffect(() => {
-      const facetQuery = `*[_type == 'facets']
-      {
-        development,
-        language,
-        design
-      }`;
+      const fetchFacet = async () => {
+         try {
+            const facetQuery = `*[_type == 'facets']
+            {
+               development,
+               language,
+               design
+            }`;
 
-      Client.fetch(facetQuery)
-         .then((data) => setFacet(data))
-         .catch(console.error);
-   }, [])
+            const data = await Client.fetch(facetQuery);
+            setFacet(data);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchFacet();
+   }, []);
 
    // Project Fetch
    const [shortProject, setShortProject] = useState([]);
    useEffect(() => {
-      const Q1 = `*[_type == 'projects']
-      {
-        project_name,
-        'slug': slug.current,
-        short_description,
-        'long_description': long_description[].children,
-        'featured_description': featured_description[].children[],
-        'project_image': project_image.asset._ref,
-        development_tools,
-        development_language,
-        designDevelop,
-        project_link,
-        github_link
-      }`;
+      const fetchShortProject = async () => {
+         try {
+            const Q1 = `*[_type == 'projects']
+            {
+               project_name,
+               'slug': slug.current,
+               short_description,
+               'long_description': long_description[].children,
+               'featured_description': featured_description[].children[],
+               'project_image': project_image.asset._ref,
+               development_tools,
+               development_language,
+               designDevelop,
+               project_link,
+               github_link
+            }`;
 
-      Client.fetch(Q1)
-         .then((data) => {
+            const data = await Client.fetch(Q1);
             const projectData = data;
             setShortProject(projectData);
-         })
-         .catch(console.error);
-
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchShortProject();
    }, []);
 
    // Media Fetch
-   const [media, setMedia] = useState([])
+   const [media, setMedia] = useState([]);
    useEffect(() => {
-      const mediaQuery = `*[_type == 'media']`
-      
-      Client.fetch(mediaQuery)
-      .then((data) => setMedia(data))
-      .catch(console.error)
-
-   }, [])
+      const fetchMedia = async () => {
+         try {
+            const mediaQuery = `*[_type == 'media']`;
+            const data = await Client.fetch(mediaQuery);
+            setMedia(data);
+         } catch (error) {
+            console.error(error);
+         }
+      };
+      fetchMedia();
+   }, []);
 
    // Sanity Image URl Builder
-   const builder = ImageUrlBuilder(Client)
+   const builder = ImageUrlBuilder(Client);
    function urlFor(source) {
-      return builder.image(source)
+      return builder.image(source);
    }
 
    return (
