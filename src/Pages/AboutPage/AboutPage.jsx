@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../Context/GlobalContext';
-import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo.jpg'
+import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo_opt.webp'
 import ContactComp from '../../Components/Contact/Contact';
 
 function About() {

@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { GlobalContext } from '../../../Context/GlobalContext';
 import Button from "../../Button/Button";
-import Portrait from '../../../Media Assets/Personal Images/bernard_portrait.jpg';
+import Portrait from '../../../Media Assets/Personal Images/bernard_about_photo_opt.webp';
 
 function HomeAbout() {
    const { homeText } = useContext(GlobalContext)

@@ -28,7 +28,6 @@ function Context({ children }) {
          })
          .catch(console.error);
    }, [])
-   console.log(about)
 
    //Language Fetch
    const [language, setLanguage] = useState([])
@@ -84,6 +83,17 @@ function Context({ children }) {
 
    }, []);
 
+   // Media Fetch
+   const [media, setMedia] = useState([])
+   useEffect(() => {
+      const mediaQuery = `*[_type == 'media']`
+      
+      Client.fetch(mediaQuery)
+      .then((data) => setMedia(data))
+      .catch(console.error)
+
+   }, [])
+
    // Sanity Image URl Builder
    const builder = ImageUrlBuilder(Client)
    function urlFor(source) {
@@ -91,7 +101,7 @@ function Context({ children }) {
    }
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, urlFor }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media }}>
          {children}
       </GlobalContext.Provider>
    )
