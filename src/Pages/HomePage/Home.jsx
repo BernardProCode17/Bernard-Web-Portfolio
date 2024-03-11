@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Head from "../../Functions/head";
 import HomeBanner from "../../Components/HomeComponents/HomeBanner/HomeBanner";
 import HomeAbout from "../../Components/HomeComponents/HomeAbout/HomeAbout";
 import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact";
@@ -6,13 +6,11 @@ import HomeProject from "../../Components/HomeComponents/HomeProjects/HomeProjec
 import HomeSkills from "../../Components/HomeComponents/HomeSkills/HomeSkills";
 
 function Home() {
-
-   useEffect(() => {
-      document.title = 'Home - Bernard Web Portfolio';
-    }, [])
+   const title = 'Home - Bernard Web Portfolio';
 
    return (
       <>
+         {Head(title)}
          <main>
             <HomeBanner />
             <HomeProject />

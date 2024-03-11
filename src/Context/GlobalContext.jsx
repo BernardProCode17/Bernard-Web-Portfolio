@@ -28,7 +28,7 @@ function Context({ children }) {
    useEffect(() => {
       const fetchAbout = async () => {
          try {
-            const aboutText = await Client.fetch(`*[_type == 'paragraph']{'About':body[].children[]}`);
+            const aboutText = await Client.fetch(`*[_type == 'paragraph']{children[]}`);
             setAbout(aboutText);
          } catch (error) {
             console.error(error);
@@ -36,8 +36,8 @@ function Context({ children }) {
       };
       fetchAbout();
    }, []);
-console.log(about)
 
+   console.log(about)
 
    //Language and Libraries & Framework fetch
    const [language, setLanguage] = useState([]);

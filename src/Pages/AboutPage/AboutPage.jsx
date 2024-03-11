@@ -1,18 +1,18 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { GlobalContext } from '../../Context/GlobalContext';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo_opt.webp'
 import ContactComp from '../../Components/Contact/Contact';
+import Head from '../../Functions/head';
 
 function About() {
-   const {homeText} = useContext(GlobalContext)
-   console.table(homeText)
+   const { homeText, about } = useContext(GlobalContext)
+   // console.table(about[])
+   const title = 'About - Bernard Web Portfolio'
 
-   useEffect(() => {
-      document.title = 'About - Bernard Web Portfolio';
-   }, [])
 
    return (
       <>
+         {Head(title)}
          <main>
             <h1>{homeText[2][0].textContent}</h1>
             {/* section 1 */}
