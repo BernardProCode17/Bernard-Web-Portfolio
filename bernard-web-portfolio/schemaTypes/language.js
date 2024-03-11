@@ -34,6 +34,11 @@ export default defineType({
          name: 'icon_alt',
          title: 'Logo Alt',
          type: 'string'
+      }),
+      defineField({
+         name: 'library_framework',
+         title: 'Library & Framework',
+         type: 'boolean'
       })
    ],
 })

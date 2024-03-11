@@ -28,7 +28,7 @@ function Context({ children }) {
    useEffect(() => {
       const fetchAbout = async () => {
          try {
-            const aboutText = await Client.fetch(`*[_type == 'paragraph']{'About':body[].children[].text}`);
+            const aboutText = await Client.fetch(`*[_type == 'paragraph']{'About':body[].children[]}`);
             setAbout(aboutText);
          } catch (error) {
             console.error(error);
@@ -36,19 +36,25 @@ function Context({ children }) {
       };
       fetchAbout();
    }, []);
+console.log(about)
 
-   //Language Fetch
+
+   //Language and Libraries & Framework fetch
    const [language, setLanguage] = useState([]);
+   const [libraries, setlibraries] = useState([]);
    useEffect(() => {
+
+      // language fetch
       const fetchLanguage = async () => {
          try {
-            const languageQuery = 
-            `*[_type == 'language']
+            const languageQuery =
+               `*[_type == 'language' && library_framework == false]
             {
-               language_name,
-               language_icon,
-               language_list,
-               language_alt
+              language_name,
+              'language_icon': language_icon.asset._ref,
+              language_list,
+              icon_alt,
+              'language_description': language_description[0].children[0].text
             }`;
 
             const data = await Client.fetch(languageQuery);
@@ -57,7 +63,27 @@ function Context({ children }) {
             console.error(error);
          }
       };
+
+      // Library & framework Fetch
+      const librariesFetch = async () => {
+         try {
+            const librariesQuery = `*[_type == 'language' && library_framework == true]
+   {
+     language_name,
+     'language_icon': language_icon.asset._ref,
+     language_list,
+     icon_alt,
+     'language_description': language_description[0].children[0].text
+   }`;
+            const data = await Client.fetch(librariesQuery);
+            setlibraries(data);
+         } catch (errror) {
+            console.error(errror)
+         }
+      };
+
       fetchLanguage();
+      librariesFetch()
    }, []);
 
    //Facet Fetch
@@ -133,7 +159,7 @@ function Context({ children }) {
    }
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media, libraries }}>
          {children}
       </GlobalContext.Provider>
    )
