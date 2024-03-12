@@ -28,15 +28,16 @@ function Context({ children }) {
    useEffect(() => {
       const fetchAbout = async () => {
          try {
-            const aboutText = await Client.fetch(`*[_type == 'paragraph']{children[]}`);
-            setAbout(aboutText);
+            const aboutText = await Client.fetch(`*[_type == 'paragraph']`);
+            const aboutTextValues = aboutText.map(item => item.body.map(block => block.children[0].text));
+            setAbout(aboutTextValues);
          } catch (error) {
             console.error(error);
          }
       };
       fetchAbout();
    }, []);
-
+   // {'About': body[].children[0].text}
    console.log(about)
 
    //Language and Libraries & Framework fetch
