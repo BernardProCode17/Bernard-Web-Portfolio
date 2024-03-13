@@ -6,7 +6,6 @@ import Head from '../../Functions/head';
 
 function About() {
    const { homeText, about } = useContext(GlobalContext)
-   console.log(about)
    const title = 'About - Bernard Web Portfolio'
 
 
@@ -14,12 +13,12 @@ function About() {
       <>
          {Head(title)}
          <main>
-            <h1>{homeText[2][0].textContent}</h1>
+            <h1>{homeText?.[2]?.[0]?.textContent}</h1>
             {/* section 1 */}
             <section>
                <img src={AboutPhoto} alt="" style={{ width: '500px' }} />
                <article>
-                  <h2>{homeText[2][1].textContent}</h2>
+                  <h2>{homeText?.[2]?.[1]?.textContent}</h2>
 
                   {about.map((paragraph) => (paragraph.map((text, index) => (<p key={index}>{text}</p>))))}
                </article>

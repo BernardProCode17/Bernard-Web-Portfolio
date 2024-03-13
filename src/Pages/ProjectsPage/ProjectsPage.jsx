@@ -14,8 +14,8 @@ function Projects() {
       {Head(title)}
       <main>
          <section>
-            <h1>{homeText[0][0].textContent}</h1> 
-            <p>{homeText[0][1].textContent}</p>
+            <h1>{homeText?.[0]?.[0]?.textContent}</h1> 
+            <p>{homeText?.[0]?.[1]?.textContent}</p>
          </section>
 
          <section>

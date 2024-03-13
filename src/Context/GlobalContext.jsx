@@ -134,6 +134,7 @@ function Context({ children }) {
 
             const data = await Client.fetch(Q1);
             const projectData = data;
+            
             setShortProject(projectData);
          } catch (error) {
             console.error(error);

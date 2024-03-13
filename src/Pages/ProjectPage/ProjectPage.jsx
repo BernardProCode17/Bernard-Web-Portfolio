@@ -8,13 +8,10 @@ import Head from "../../Functions/head";
 function Project() {
    const { slug } = useParams()
    const title = `${slug} - Bernard Web Portfolio`
-   const { shortProject } = useContext(GlobalContext)
+   const { shortProject, urlFor } = useContext(GlobalContext)
    const project = shortProject.find(proslug => proslug.slug === slug)
    const LDArray = project.long_description.flatMap(subarray => subarray.map(item => item.text))
    const FDArray = project.featured_description.flatMap(subarray => subarray.map(item => item.text))
-
-
-
 
    return (
       <>
@@ -22,7 +19,7 @@ function Project() {
 
          <main>
             <h1>{project.project_name}</h1>
-            {/* <img src="" alt="" /> */}
+            <img src={project.project_image && urlFor(project.project_image).url()} alt="" />
             <article>
                {Object.keys(project).filter(key => key === 'long_description').map((key, index) => (
                   <h2 key={index}>{'Full ' + key.slice(5, 6).toUpperCase() + key.slice(6).toLowerCase()}</h2>

@@ -18,7 +18,6 @@ function SkillsCard() {
                <button onClick={() => dropDownToggle(index)} aria-label="view more information">
                   <h3>{lang.language_name}</h3>
                </button>
-
                {selectedItem === index && (
 
                   <article className="card">

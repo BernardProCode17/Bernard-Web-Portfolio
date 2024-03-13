@@ -9,8 +9,8 @@ function HomeProject() {
 
   return (
     <section>
-      {/* <h2>{homeText[3][4] && homeText[3][4].textContent}</h2>
-      <p>{homeText[3][5] && homeText[3][5].textContent}</p> */}
+      <h2>{homeText?.[3]?.[4]?.textContent}</h2>
+      <p>{homeText?.[3]?.[5]?.textContent}</p>
 
       <section>
         <ProjectCard />

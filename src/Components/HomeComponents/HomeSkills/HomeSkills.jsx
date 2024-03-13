@@ -8,8 +8,8 @@ function HomeSkills() {
    const { homeText } = useContext(GlobalContext)
    return (
       <section>
-         {/* <h2>{homeText[3][6] && homeText[3][6].textContent}</h2>
-         <p>{homeText[3][7] && homeText[3][7].textContent}</p> */}
+         <h2>{homeText?.[3]?.[6]?.textContent}</h2>
+         <p>{homeText?.[3]?.[7]?.textContent}</p>
 
          <section>
             <Link to={'/skills'} aria-label="go to skills">
@@ -17,7 +17,7 @@ function HomeSkills() {
             </Link>
          </section>
 
-         {/* <Link to={'/skills'} aria-label="skills">{homeText[3][6] && homeText[3][6].textContent}</Link> */}
+         <Link to={'/skills'} aria-label="skills">{homeText?.[3]?.[6]?.textContent}</Link>
       </section>
    )
 }

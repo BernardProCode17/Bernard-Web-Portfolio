@@ -16,17 +16,17 @@ function Skills() {
       {Head(title)}
          <main>
             <section>
-               <h1>{homeText[1][0] && homeText[1][0].textContent}</h1> 
-               <p>{homeText[1][1] && homeText[1][1].textContent}</p>
+               <h1>{homeText?.[1]?.[0]?.textContent}</h1>  
+              <p>{homeText?.[1]?.[1]?.textContent}</p>
             </section>
 
             <section>
-               <h2>{homeText[1][2] && homeText[1][2].textContent}</h2>
+               <h2>{homeText?.[1]?.[2]?.textContent}</h2>
                <SkillsCard />
             </section>
 
             <section>
-               <h2>{homeText[1][3] && homeText[1][3].textContent}</h2>
+               <h2>{homeText?.[1]?.[3]?.textContent}</h2>
                <Libraries_frameworks />
             </section>
 

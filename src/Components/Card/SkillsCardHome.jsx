@@ -2,17 +2,18 @@ import { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalContext";
 
 function SkillsCardHome() {
-   const language = useContext(GlobalContext)
+   const { language, urlFor } = useContext(GlobalContext);
 
    return (
       <>
-         {language.language.map((lang, index) => (
+         {language.map((lang, index) => (
             <article className="card" key={index}>
                <h3>{lang.language_name}</h3>
-               {/* <img src={icon} alt="" /> */}
+               <img src={lang.language_icon && urlFor(lang.language_icon).url()} alt="" />
             </article>
          ))}
       </>
    );
 }
 export default SkillsCardHome;
+ 

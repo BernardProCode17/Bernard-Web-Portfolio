@@ -9,8 +9,7 @@ function HomeBanner() {
    const {media} = useContext(GlobalContext)
    return (
       <section>
-         {/* <img src={headerImage} alt="Photo of me Bernard, posing professional with a smile" style={{ height: '500px', pointerEvents: 'none' }} /> */}
-         {/* <video src={media[6].video} autoPlay muted loop onContextMenu={(e) => e.preventDefault()}></video> */}
+         <video src={media?.[6]?.video} autoPlay muted loop onContextMenu={(e) => e.preventDefault()}></video>
          <HomeWelcomeCard />
       </section>
    )
