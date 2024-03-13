@@ -9,7 +9,6 @@ function SkillsCardHome() {
          {language.language.map((lang, index) => (
             <article className="card" key={index}>
                <h3>{lang.language_name}</h3>
-               <p></p>
                {/* <img src={icon} alt="" /> */}
             </article>
          ))}

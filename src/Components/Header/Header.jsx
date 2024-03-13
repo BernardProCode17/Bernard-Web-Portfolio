@@ -6,7 +6,7 @@ function Header() {
    return (
       <header>
          <Navigation />
-         <Link to="/">
+         <Link to="/" aria-label="link to Home">
             <img src={logo} alt="Logo of Bernard brand - The word 'Bernard'" style={{ height: '170px' }} />
          </Link>
       </header>

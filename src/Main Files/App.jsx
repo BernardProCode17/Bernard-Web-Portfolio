@@ -7,12 +7,15 @@ import About from "../Pages/AboutPage/AboutPage";
 import Project from "../Pages/ProjectPage/ProjectPage";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
+import VerseOfTheDay from "../Bible Verse/Bibleverse";
+import SkipToMain from "../Functions/skipToMain";
 
 function App() {
 
   return (
     <Context>
       <Router>
+        <SkipToMain />
         <Header />
         <Routes>
           <Route exact path="/" Component={Home} />
@@ -21,6 +24,7 @@ function App() {
           <Route path="/skills" Component={Skills} />
           <Route path="/about" Component={About} />
         </Routes>
+        <VerseOfTheDay />
         <Footer />
       </Router>
     </Context>

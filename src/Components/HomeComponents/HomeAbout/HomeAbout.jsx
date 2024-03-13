@@ -15,7 +15,7 @@ function HomeAbout() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt rem cupiditate quas fuga veritatis consequatur ipsam amet molestias qui eos totam quidem porro, modi iusto!</p>
          </section>
 
-         <Button title={'About'} URL={'/about'} />
+         <Button title={'About'} URL={'/about'} aria-label='go to about' />
       </section>
    )
 }

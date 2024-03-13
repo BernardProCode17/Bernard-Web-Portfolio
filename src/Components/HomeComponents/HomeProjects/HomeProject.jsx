@@ -9,14 +9,14 @@ function HomeProject() {
 
   return (
     <section>
-      {/* <h2>{homeText[3][4].textContent}</h2>
-      <p>{homeText[3][5].textContent}</p> */}
+      {/* <h2>{homeText[3][4] && homeText[3][4].textContent}</h2>
+      <p>{homeText[3][5] && homeText[3][5].textContent}</p> */}
 
       <section>
         <ProjectCard />
       </section>
 
-      <Button title={"Projects"} URL={"/projects"} />
+      <Button title={"Projects"} URL={"/projects"} aria-label='go to projects' />
     </section>
   );
 }

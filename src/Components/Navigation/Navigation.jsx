@@ -5,20 +5,17 @@ function Navigation() {
       <nav>
          <ul>
             <li>
-               <Link to="/">Home</Link>
+               <Link to="/" aria-label='Home'>Home</Link>
             </li>
             <li>
-               <Link to="/projects">Projects</Link>
+               <Link to="/projects" aria-label='projects' >Projects</Link>
             </li>
             <li>
-               <Link to="/skills">Skills</Link>
+               <Link to="/skills" aria-label='skills'>Skills</Link>
             </li>
             <li>
-               <Link to="/about">About</Link>
+               <Link to="/about" aria-label='about'>About</Link>
             </li>
-            {/* <li>
-               <Link to="/contact">Contact</Link>
-            </li> */}
          </ul>
       </nav>
 

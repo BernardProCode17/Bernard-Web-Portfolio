@@ -6,7 +6,7 @@ function Footer() {
    return (
       <footer>
          <section>
-            <Link>
+            <Link to='/' aria-label='link to Home' >
             <img src={Logo} alt="Icon logo for my brand - Bernard Brand - The Capital letter B with a light source at the top right corner" style={{height: '50px' }}/>
             </Link>
 

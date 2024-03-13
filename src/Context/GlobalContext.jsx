@@ -23,6 +23,12 @@ function Context({ children }) {
       fetchHomeText();
    }, []);
 
+
+   //Bible verse Fetch
+   // useEffect( () =>{
+ 
+   // },[])
+
    // About Page Article 
    const [about, setAbout] = useState([]);
    useEffect(() => {
@@ -37,8 +43,6 @@ function Context({ children }) {
       };
       fetchAbout();
    }, []);
-   // {'About': body[].children[0].text}
-   console.log(about)
 
    //Language and Libraries & Framework fetch
    const [language, setLanguage] = useState([]);

@@ -32,7 +32,7 @@ function Project() {
                ))}
             </article>
 
-            <article>
+            <section>
                {Object.keys(project).filter(key => key === 'featured_description').map((key, index) => (
                   <h2 key={index}>{key.replace(/_/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h2>
                ))}
@@ -41,10 +41,10 @@ function Project() {
                      <li key={index}>{text}</li>
                   ))}
                </ul>
-            </article>
+            </section>
 
             <section>
-               <div>
+               <>
                   {Object.keys(project).filter(key => key === 'development_tools').map((key, index) => (
                      <h2 key={index}>{key.replace(/_/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h2>
                   ))}
@@ -53,9 +53,9 @@ function Project() {
                         <li key={index}>{tools}</li>
                      )}
                   </ul>
-               </div>
+               </>
 
-               <div>
+               <>
                   {Object.keys(project).filter(key => key === 'development_language').map((key, index) => (
                      <h2 key={index}>{key.replace(/_/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h2>
                   ))}
@@ -64,12 +64,12 @@ function Project() {
                         <li key={index}>{lang}</li>
                      )}
                   </ul>
-               </div>
+               </>
             </section>
 
             <section>
-               <Link to={project.project_link}><IoIosCloudOutline /></Link>
-               <Link to={project.github_link}><IoLogoGithub /></Link>
+               <Link to={project.project_link} aria-label="link to live site"><IoIosCloudOutline /></Link>
+               <Link to={project.github_link} aria-label="link to GitHub"><IoLogoGithub /></Link>
             </section>
 
          </main>

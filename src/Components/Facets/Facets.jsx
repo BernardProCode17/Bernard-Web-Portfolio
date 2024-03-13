@@ -25,7 +25,7 @@ function Facets() {
             Object.entries(groupedFacets).map(([key, values], index) => (
                <div key={index}>
 
-                  <button onClick={() => Toggle(index)}>
+                  <button onClick={() => Toggle(index)} aria-label="Vew more information">
                      {key.charAt(0).toUpperCase()+key.slice(1)}
                   </button>
                   <div>

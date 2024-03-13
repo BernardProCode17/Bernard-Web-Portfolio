@@ -13,7 +13,7 @@ function SkillsCard() {
       <>
          {libraries.map((lang, index) => (
             <div key={index}>
-               <button onClick={() => dropDownToggle(index)}>
+               <button onClick={() => dropDownToggle(index)} aria-label="View more information">
                   <h3>{lang.language_name}</h3>
                </button>
 

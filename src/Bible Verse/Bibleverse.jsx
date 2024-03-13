@@ -8,8 +8,8 @@ function VerseOfTheDay() {
          try {
             const response = await fetch('https://bible-api.com/matthew+22:37-39');
             const data = await response.json();
-            console.log(data)
-            setVerse(data.text);
+            const verseData = data.reference
+            setVerse(verseData);
          } catch (error) {
             console.error(error);
          }
@@ -17,10 +17,10 @@ function VerseOfTheDay() {
 
       fetchVerse();
    }, []);
-
-   console.log(verse)
    return (
-      <p>{verse}</p>
+      <aside>
+         <p>{verse}</p>
+      </aside>
    )
 }
 
