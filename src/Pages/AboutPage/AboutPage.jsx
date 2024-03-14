@@ -1,12 +1,24 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../Context/GlobalContext';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo_opt.webp'
 import ContactComp from '../../Components/Contact/Contact';
 import Head from '../../Functions/head';
+import ShuffleGallery from '../../Components/Image Gallery/ImageGallery';
 
 function About() {
-   const { homeText, about } = useContext(GlobalContext)
+   const { homeText, about, media } = useContext(GlobalContext)
+   const [imageArray, setImageArray] = useState([])
    const title = 'About - Bernard Web Portfolio'
+   // console.log(media)
+
+   useEffect(() => {
+      if (media.length > 0) {
+         const photos = media.filter(item => item.display_image === true);
+         setImageArray(photos.map((photo) => { return photo.photo_video.asset._ref }))
+      }
+   }, [media])
+
+   // console.log(imageArray)
 
 
    return (
@@ -25,26 +37,7 @@ function About() {
             </section>
 
             <div>
-
-               {/* Section 2 - Image Gallery */}
-               {/* use the picture tag to render the pictures */}
-               {/* Refactor the HTML */}
-               {/* <section>
-               <section>
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               <img src="" alt="" />
-               </section>
-            </section> */}
+               <ShuffleGallery images={imageArray} />
             </div>
 
             <ContactComp />

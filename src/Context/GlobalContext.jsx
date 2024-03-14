@@ -26,7 +26,7 @@ function Context({ children }) {
 
    //Bible verse Fetch
    // useEffect( () =>{
- 
+
    // },[])
 
    // About Page Article 
@@ -134,7 +134,7 @@ function Context({ children }) {
 
             const data = await Client.fetch(Q1);
             const projectData = data;
-            
+
             setShortProject(projectData);
          } catch (error) {
             console.error(error);
@@ -150,7 +150,8 @@ function Context({ children }) {
          try {
             const mediaQuery = `*[_type == 'media']`;
             const data = await Client.fetch(mediaQuery);
-            setMedia(data);
+            const imageRef = data.filter(item => Object.keys(item).lenght !== 0)
+            setMedia(imageRef);
          } catch (error) {
             console.error(error);
          }

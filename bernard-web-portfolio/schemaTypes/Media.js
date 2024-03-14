@@ -13,13 +13,18 @@ export default defineType({
       }),
       defineField({
          name: 'video',
-         title: 'Video',
+         title: 'Video/Title',
          type: 'string'
       }),
       defineField({
          name: 'alt_text',
          title: 'Alt Text',
          type: 'string'
+      }),
+      defineField({
+         name: 'display_image',
+         title: 'Display Image',
+         type: 'boolean'
       })
    ]
 })
