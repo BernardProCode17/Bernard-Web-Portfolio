@@ -4,6 +4,7 @@ import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo_o
 import ContactComp from '../../Components/Contact/Contact';
 import Head from '../../Functions/head';
 import ShuffleGallery from '../../Components/Image Gallery/ImageGallery';
+import MobileMenu from '../../Components/Menus/mobile menu/mobileMenu';
 
 function About() {
    const { homeText, about, media } = useContext(GlobalContext)
@@ -35,7 +36,7 @@ function About() {
                   {about.map((paragraph) => (paragraph.map((text, index) => (<p key={index}>{text}</p>))))}
                </article>
             </section>
-
+            
             {/* <div>
                <ShuffleGallery images={imageArray} />
             </div> */}

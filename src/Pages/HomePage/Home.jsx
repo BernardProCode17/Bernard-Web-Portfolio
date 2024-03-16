@@ -22,6 +22,8 @@ Food Explorer,Food blogging site,Cuisine articles,Mind Set,WordPress,Health blog
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>{title}</title>
          </Helmet>
+
+         
          <main className="">
             <HomeBanner />
             <HomeProject />

@@ -8,7 +8,7 @@ import Project from "../Pages/ProjectPage/ProjectPage";
 import Footer from "../Components/Footer/Footer";
 import Header from "../Components/Header/Header";
 import VerseOfTheDay from "../Bible Verse/Bibleverse";
-import SkipToMain from "../Functions/skipToMain";
+import SkipToMain from "../Components/Button/skipToMain";
 
 function App() {
 
