@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom'
+import '../../styles/Sass/components/_navigation.scss'
 function Navigation() {
 
    return (
-      <nav>
-         <ul>
-            <li>
-               <Link to="/" aria-label='Home'>Home</Link>
+      <nav className='nav'>
+         <ul className='nav__ul'>
+            <li className='nav__li'>
+               <Link to="/" aria-label='Home' className='nav__link'>Home</Link>
             </li>
-            <li>
-               <Link to="/projects" aria-label='projects' >Projects</Link>
+            <li className='nav__li'>
+               <Link to="/projects" aria-label='projects'  className='nav__link'>Projects</Link>
             </li>
-            <li>
-               <Link to="/skills" aria-label='skills'>Skills</Link>
+            <li className='nav__li'>
+               <Link to="/skills" aria-label='skills' className='nav__link'>Skills</Link>
             </li>
-            <li>
-               <Link to="/about" aria-label='about'>About</Link>
+            <li className='nav__li'>
+               <Link to="/about" aria-label='about' className='nav__link'>About</Link>
             </li>
          </ul>
       </nav>

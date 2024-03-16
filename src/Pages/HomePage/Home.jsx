@@ -5,6 +5,7 @@ import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact
 import HomeProject from "../../Components/HomeComponents/HomeProjects/HomeProject";
 import HomeSkills from "../../Components/HomeComponents/HomeSkills/HomeSkills";
 import { Helmet } from "react-helmet";
+import '../../styles/Sass/Pages/_home.scss'
 
 function Home() {
    const title = 'Home - Bernard Web Portfolio';
@@ -21,7 +22,7 @@ Food Explorer,Food blogging site,Cuisine articles,Mind Set,WordPress,Health blog
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>{title}</title>
          </Helmet>
-         <main>
+         <main className="">
             <HomeBanner />
             <HomeProject />
             <HomeSkills />

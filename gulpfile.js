@@ -1,14 +1,10 @@
-// var gulp = require('gulp');
-// var sass = require('gulp-sass');
-// var cleanCSS = require('gulp-clean-css');
-
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 
 // Compile Sass into CSS
 gulp.task('sass', function() {
-   return gulp.src('./sass/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+   return gulp.src('./Sass/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
    .pipe(sass().on('error', sass.logError))
    .pipe(gulp.dest('./css'))
    .on('end', function(){ console.log('Sass compilation completed.'); });
@@ -22,6 +18,6 @@ gulp.task('minify-css', () => {
 
 // Watch for changes
 gulp.task('watch', function(){
-   gulp.watch('./sass/**/*.scss', gulp.series('sass', 'minify-css')); 
+   gulp.watch('./Sass/**/*.scss', gulp.series('sass', 'minify-css')); 
    // Other watchers
 })

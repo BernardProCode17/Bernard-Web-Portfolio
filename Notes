@@ -5,3 +5,5 @@
 ///////
 
 Add accessibility Later
+
+sass --watch Sass/main.scss css/main.css

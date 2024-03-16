@@ -1,12 +1,10 @@
 import { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../../Context/GlobalContext';
-function ShuffleGallery({ images}) {
+function ShuffleGallery({ images }) {
 
    const { urlFor } = useContext(GlobalContext)
    const [imageFrames, setImageFrames] = useState([]);
    const [remainingImages, setRemainingImages] = useState([...images])
-
-   // console.log(images)
 
    useEffect(() => {
       const timer = setInterval(() => {
@@ -14,15 +12,16 @@ function ShuffleGallery({ images}) {
          setImageFrames(prevFrames => {
 
             const newFrames = [...prevFrames];
+            const updatingRemainingImages = [...remainingImages]
             for (let i = 0; i < newFrames.length; i++) {
-               if (remainingImages.length === 0) {
-                  setRemainingImages([...images]);
+               if (updatingRemainingImages.length === 0) {
+                  updatingRemainingImages.push(...images);
                   continue;
                }
-               const randomIndex = Math.floor(Math.random() * remainingImages.length);
-               const selectedImages = remainingImages[randomIndex];
+               const randomIndex = Math.floor(Math.random() * updatingRemainingImages.length);
+               const selectedImages = updatingRemainingImages[randomIndex];
 
-               if (!selectedImages.photo_video.assest._ref) {
+               if (!selectedImages.photo_video.asset._ref) {
                   console.error('Invalid image: image should be defined');
                   continue;
                }
@@ -33,10 +32,9 @@ function ShuffleGallery({ images}) {
                   height: Math.random() * (100 - 50) + 50,
                };
 
-               const updatingRemainingImages = [...remainingImages];
                updatingRemainingImages.splice(randomIndex, 1);
-               setRemainingImages(updatingRemainingImages)
             }
+            setRemainingImages(updatingRemainingImages)
             return newFrames;
          });
       }, 3000);
@@ -49,9 +47,8 @@ function ShuffleGallery({ images}) {
          console.error('Invalid prop: images should be an array');
          return;
       }
-console.log(images)
-      const initialFrames = images.map(( image ) => {
-         console.log(image)
+
+      const initialFrames = images.map((image) => {
          if (!image) {
             console.error('Invalid image: image should be defined');
             return null;

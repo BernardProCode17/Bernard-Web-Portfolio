@@ -36,9 +36,9 @@ function About() {
                </article>
             </section>
 
-            <div>
+            {/* <div>
                <ShuffleGallery images={imageArray} />
-            </div>
+            </div> */}
 
             <ContactComp />
          </main>

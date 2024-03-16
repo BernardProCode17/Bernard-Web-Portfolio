@@ -1,13 +1,14 @@
 import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
 import logo from "../../assets/wordmark_logo.png"
+import '../../styles/Sass/components/_header.scss'
 function Header() {
 
    return (
-      <header>
+      <header className="header">
          <Navigation />
-         <Link to="/" aria-label="link to Home">
-            <img src={logo} alt="Logo of Bernard brand - The word 'Bernard'" style={{ height: '170px' }} />
+         <Link to="/" aria-label="link to Home" className="header__link">
+            <img src={logo} className="header__logo" alt="Logo of Bernard brand - The word 'Bernard'" />
          </Link>
       </header>
    )
