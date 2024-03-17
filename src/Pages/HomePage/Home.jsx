@@ -4,6 +4,7 @@ import HomeAbout from "../../Components/HomeComponents/HomeAbout/HomeAbout";
 import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact";
 import HomeProject from "../../Components/HomeComponents/HomeProjects/HomeProject";
 import HomeSkills from "../../Components/HomeComponents/HomeSkills/HomeSkills";
+import './Home.css'
 import { Helmet } from "react-helmet";
 
 function Home() {
@@ -23,7 +24,7 @@ Food Explorer,Food blogging site,Cuisine articles,Mind Set,WordPress,Health blog
          </Helmet>
 
          
-         <main className="">
+         <main className="home__main">
             <HomeBanner />
             <HomeProject />
             <HomeSkills />
