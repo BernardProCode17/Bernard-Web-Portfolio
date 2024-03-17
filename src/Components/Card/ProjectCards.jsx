@@ -12,7 +12,7 @@ function Card() {
                <article className="card">
                   <h3>{project?.project_name}</h3>
                   <p>{project?.short_description}</p>
-                  <img src={project && project['project_image'] && urlFor(project?.project_image)?.url()} alt={project.project_name} />
+                  <img src={project && project['project_image'] && urlFor(project?.project_image)?.url()} alt={project.project_name} style={{width: '50px'}}/>
                </article>
             </Link>
          ))}

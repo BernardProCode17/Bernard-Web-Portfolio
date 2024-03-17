@@ -5,7 +5,6 @@ import HomeContact from "../../Components/HomeComponents/HomeContact/HomeContact
 import HomeProject from "../../Components/HomeComponents/HomeProjects/HomeProject";
 import HomeSkills from "../../Components/HomeComponents/HomeSkills/HomeSkills";
 import { Helmet } from "react-helmet";
-import '../../styles/Sass/Pages/_home.scss'
 
 function Home() {
    const title = 'Home - Bernard Web Portfolio';

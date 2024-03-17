@@ -1,9 +1,25 @@
 import { Link } from 'react-router-dom'
-import '../../styles/Sass/components/_navigation.scss'
+import './Navigation.css'
+import { useState, useEffect } from 'react';
+
 function Navigation() {
+   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+   const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+   };
+
+   useEffect(() => {
+      window.addEventListener('resize', handleWindowResize);
+
+      return () => {
+         window.removeEventListener('resize', handleWindowResize);
+      };
+   }, []);
 
    return (
-      <nav className='nav'>
+      
+      <nav className={`header__nav ${windowWidth < 768 ? 'nav__mobile' : 'nav__desktop'}`}>
          <ul className='nav__ul'>
             <li className='nav__li'>
                <Link to="/" aria-label='Home' className='nav__link'>Home</Link>
@@ -19,7 +35,8 @@ function Navigation() {
             </li>
          </ul>
       </nav>
-
+   
    )
 }
-export default Navigation
+
+export default Navigation;

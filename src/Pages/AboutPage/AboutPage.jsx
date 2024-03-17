@@ -3,8 +3,7 @@ import { GlobalContext } from '../../Context/GlobalContext';
 import AboutPhoto from '../../Media Assets/Personal Images/bernard_about_photo_opt.webp'
 import ContactComp from '../../Components/Contact/Contact';
 import Head from '../../Functions/head';
-import ShuffleGallery from '../../Components/Image Gallery/ImageGallery';
-import MobileMenu from '../../Components/Menus/mobile menu/mobileMenu';
+// import ShuffleGallery from '../../Components/Image Gallery/ImageGallery';
 
 function About() {
    const { homeText, about, media } = useContext(GlobalContext)

@@ -1,26 +1,5 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="30px" height="30px" viewBox="0 0 48 48" id="a" xmlns="http://www.w3.org/2000/svg" fill="#0000ff">
-
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-<g id="SVGRepo_iconCarrier">
-
-<defs>
-
-<style>.f{fill:none;stroke:#0000ff;stroke-linecap:round;stroke-linejoin:round;}</style>
-
-</defs>
-
-<circle id="b" class="f" cx="24" cy="24" r="8.5"/>
-
-<circle id="c" class="f" cx="24" cy="24" r="11.8"/>
-
-<circle id="d" class="f" cx="24" cy="24" r="18.25"/>
-
-<circle id="e" class="f" cx="24" cy="24" r="21.5"/>
-
-</g>
-
+<svg width="50" height="50" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="15.46" cy="16.1749" rx="15.3" ry="15.6844" fill="#0000FF"/>
+<ellipse cx="15.46" cy="16.1749" rx="12.24" ry="12.5475" fill="white"/>
+<ellipse cx="15.4599" cy="16.1749" rx="10.2" ry="10.4563" fill="#0000FF"/>
 </svg>
