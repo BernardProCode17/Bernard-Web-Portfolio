@@ -1,0 +1,14 @@
+.section__header{
+   background-color: blue;
+   border-bottom-left-radius: 0.625rem;
+   border-bottom-right-radius: 0.625rem;
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+}
+
+.section__header h2, .section__header p{
+   margin: 0rem auto;
+   padding: 0.3rem;
+   color: #fff;
+}

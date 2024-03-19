@@ -1,0 +1,49 @@
+.projects__home {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   margin: 0rem auto;
+}
+
+.projects__home__cards {
+   display: grid;
+   grid-template-rows: auto;
+   justify-content: center;
+   align-items: center;
+}
+
+
+/* .projects__link {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   margin: 1rem auto;
+} */
+
+.project__home__card {
+   background-color: blue;
+   color: blue;
+   width: 30%;
+   height: 50%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.project__title,
+.project__description {
+   z-index: 1;
+}
+
+.project__image {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 1.25rem;
+   z-index: 0;
+}
