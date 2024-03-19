@@ -23,12 +23,6 @@ function Context({ children }) {
       fetchHomeText();
    }, []);
 
-
-   //Bible verse Fetch
-   // useEffect( () =>{
-
-   // },[])
-
    // About Page Article 
    const [about, setAbout] = useState([]);
    useEffect(() => {
