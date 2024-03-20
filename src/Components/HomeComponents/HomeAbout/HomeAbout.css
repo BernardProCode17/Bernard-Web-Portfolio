@@ -1,0 +1,39 @@
+.about__home {
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 1rem;
+}
+
+.about__home-section {
+   /* background-color: beige; */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   padding: 0.5rem;
+}
+
+.about__home__photo {
+   width: 75px;
+   border-radius: 0.625rem;
+   background: linear-gradient(145deg, #ffffff43, #CDCFD2);
+   border-radius: 13%;
+   box-shadow: 5.41px 5.41px 6px #95969949, -5.41px -5.41px 6px #FFFFFF;
+}
+
+.about__home__p {
+   background-color: skyblue;
+   padding: 0.7rem;
+   text-align: left;
+   line-height: 1.373;
+   background: linear-gradient(145deg, #ffffff43, #CDCFD2);
+   border-radius: 13%;
+   box-shadow: 5.41px 5.41px 6px #95969949, -5.41px -5.41px 6px #FFFFFF;
+}
+
+.about__home__link {
+   margin: 1rem auto;
+   margin-bottom: 1rem;
+}

@@ -11,10 +11,9 @@
    flex-direction: column;
    justify-content: center;
    align-items: start;
-   border-radius: 46px;
-   background: rgb(255, 255, 255, 0.8);
-   box-shadow: 26px 26px 30px rgb(255, 255, 255,0.3),
-      -26px -26px 30px rgb(255, 255, 255, 0.3);
+   background: linear-gradient(145deg, #FFFFFF, rgba(205, 207, 210, 0.784));
+   border-radius: 13%;
+   box-shadow: 5.41px 5.41px 6px rgba(149, 150, 153, 0.5), -5.41px -5.41px 6px rgba(255, 255, 255, 0.3);
 }
 
 .welcome p {
@@ -25,9 +24,11 @@
 .welcome__h1 {
    font-family: sans-serif;
 }
+
 .welcome__title {
    font-family: sans-serif;
 }
+
 .welcome__skills {
    font-family: 'source code';
 }

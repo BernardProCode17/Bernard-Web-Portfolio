@@ -1,32 +1,42 @@
-import  { Link }  from 'react-router-dom';
-import  codepen  from '../../assets/codepen.svg';
-import  email  from '../../assets/email.svg';
-import  github  from '../../assets/github.svg';
+import { GlobalContext } from '../../Context/GlobalContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import codepen from '../../assets/codepen.svg';
+import email from '../../assets/email.svg';
+import github from '../../assets/github.svg';
 import linkedin from '../../assets/linkedin.svg'
-import  phone  from '../../assets/phone.svg';
+import phone from '../../assets/phone.svg';
+import './Contact.css';
 
 function ContactComp() {
 
+   const context = useContext(GlobalContext);
+   const links = context.links?.links || [];
+   const linkStrings = context.links?.linkStrings || [];
+
+   const [lkd, git, code] = links;
+   const [eml, tel] = linkStrings
+
    return (
-      <section>
-         <Link to={'https://ca.linkedin.com/in/bernard-clarke-374220212'}>
-            <img src={linkedin} alt="" />
+      <section className='contact'>
+         <Link to={lkd} className='contact__links'>
+            <img src={linkedin} alt="" className='social-svg' />
          </Link>
 
-         <Link to={'https://github.com/BernardProCode17'}>
-            <img src={github} alt="" />
+         <Link to={git} className='contact__links'>
+            <img src={github} alt="" className='social-svg' />
          </Link>
 
-         <Link to={'https://codepen.io/Christian-7'}>
-            <img src={codepen} alt="" />
+         <Link to={code} className='contact__links'>
+            <img src={codepen} alt="" className='social-svg' />
          </Link>
 
-         <Link to={'mailto:bernardanthonyclarke1292@gmail.com'}>
-            <img src={email} alt="" />
+         <Link to={eml} className='contact__links'>
+            <img src={email} alt="" className='social-svg' />
          </Link>
 
-         <Link to={'tel:+12507750587'}>
-            <img src={phone} alt="" />
+         <Link to={tel} className='contact__links'>
+            <img src={phone} alt="" className='social-svg' />
          </Link>
 
       </section>

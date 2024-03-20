@@ -5,16 +5,19 @@ import SkillsCard from "../../Components/Card/SkillsCards";
 import Libraries_frameworks from '../../Components/Card/SkillsCards_Libraries_frameworks'
 import ContactComp from "../../Components/Contact/Contact";
 import Facets from "../../Components/Facets/Facets";
+import SectionHeader from "../../Components/Reusable/SectionHeader";
+
 
 function Skills() {
    const { homeText } = useContext(GlobalContext)
    const title = 'Skills - Bernard Web Portfolio'
+   const empty = 'i'
 
-// console.log(homeText[1])
    return (
       <>
       {Head(title)}
          <main>
+            <SectionHeader empty={empty}/>
             <section>
                <h1>{homeText?.[1]?.[0]?.textContent}</h1>  
               <p>{homeText?.[1]?.[1]?.textContent}</p>

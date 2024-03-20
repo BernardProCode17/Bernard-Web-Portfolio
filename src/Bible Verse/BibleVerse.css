@@ -1,0 +1,19 @@
+.bibleVerse {
+   position: fixed;
+   top: 70%;
+   right: 0;
+   background-color: green;
+   border-radius: 7px;
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+   z-index: 777;
+}
+
+.bibleVerse p {
+   color: #fff;
+   padding: 7px;
+   writing-mode: vertical-rl;
+   text-orientation: upright;
+   margin: 0rem auto;
+   text-align: center;
+}

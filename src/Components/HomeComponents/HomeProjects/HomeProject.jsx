@@ -20,7 +20,7 @@ const subTitle = <p>{homeText?.[3]?.[5]?.textContent}</p>
         <ProjectCard limit={4} homePage={true}/>
       </section>
 
-      <Button title={"Projects"} URL={"/projects"} aria-label='go to projects' />
+      <Button title={"Projects"} URL={"/projects"} aria-label='go to projects' className='project__home__link'/>
       <SectionFooter />
     </section>
   );

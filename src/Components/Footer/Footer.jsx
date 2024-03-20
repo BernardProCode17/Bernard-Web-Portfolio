@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom"
-import Logo from '../../assets/icon_logo.png';
-
+import Logo from "../../assets/Logo Icon.svg";
+import './Footer.css';
 function Footer() {
 
    return (
-      <footer>
-         <section>
-            <Link to='/' aria-label='link to Home' >
-            <img src={Logo} alt="Icon logo for my brand - Bernard Brand - The Capital letter B with a light source at the top right corner" style={{height: '50px' }}/>
+      <footer className="footer">
+         <section className="footer__section">
+
+            <Link to='/' aria-label='link to Home'>
+               <img src={Logo} alt="Icon logo for my brand - Bernard Brand - The Capital letter B with a light source at the top right corner" />
             </Link>
 
-            <p>Bernard A. Clarke</p>
-            <p>{new Date().getFullYear()}</p>
+            <div className="footer__text">
+               <p className="footer__title">Bernard A. Clarke</p>
+               <p className="footer__date">{new Date().getFullYear()}</p>
+            </div>
          </section>
       </footer>
    )

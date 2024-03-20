@@ -1,0 +1,42 @@
+.skills__home {
+   /* background-color: beige; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   width: 100%;
+   margin: 0rem auto;
+}
+
+.skills__home-cards {
+   /* background-color: beige; */
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   align-items: center;
+   margin: 1rem auto;
+   width: 100%;
+   height: 78vh;
+}
+
+
+/* .skills__home-prolink {
+   background-color: blue;
+   margin: 0rem auto;
+   padding: 3rem;
+   width: 100%;
+} */
+.skills__home__link {
+   background-color: blue;
+   margin: 1rem auto;
+   margin-top: 3rem;
+   padding: 0.1875rem 0.3125rem;
+   width: max-content;
+   color: #fff;
+   border-radius: 0.625rem;
+   background: linear-gradient(145deg, #0000ff, #0000ff);
+   border-radius: 13%;
+   box-shadow: 2.71px 2.41px 6px #959699, -2.41px -2.41px 5px #959699;
+
+
+}

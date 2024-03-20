@@ -153,6 +153,21 @@ function Context({ children }) {
       fetchMedia();
    }, []);
 
+   // Links and URLS Fetch
+   const [links, setLinks] = useState([])
+   useEffect(() => {
+      const fetchLinks = async () => {
+         try {
+            const linkQuery = `*[_type == 'links_urls']{links,linkStrings}`
+            const fetch = await Client.fetch(linkQuery);
+            setLinks(fetch[0])
+         } catch (error) {
+            console.error('Error', error)
+         }
+      }
+      fetchLinks();
+   }, []);
+
    // Sanity Image URl Builder
    const builder = ImageUrlBuilder(Client);
    function urlFor(source) {
@@ -160,7 +175,7 @@ function Context({ children }) {
    }
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media, libraries }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media, libraries, links }}>
          {children}
       </GlobalContext.Provider>
    )

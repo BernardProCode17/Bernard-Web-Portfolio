@@ -1,19 +1,28 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../Context/GlobalContext";
+import { Link } from "react-router-dom";
+import './SkillsCardHome.css'
 
 function SkillsCardHome() {
    const { language, urlFor } = useContext(GlobalContext);
+   const [homeSkills, SetHomeSkills] = useState([])
+const orderLang = ['HTML', 'JavaScript', 'PHP' ]
+   useEffect(() => {
+      const selectedLanguage = language.filter(lang => ['HTML', 'PHP', 'JavaScript'].includes(lang.language_name))
+      SetHomeSkills(selectedLanguage)
+   }, [language])
 
    return (
       <>
-         {language.map((lang, index) => (
-            <article className="card" key={index}>
-               <h3>{lang.language_name}</h3>
-               <img src={lang.language_icon && urlFor(lang.language_icon).url()} alt="" style={{width: '50px'}} />
-            </article>
+         {homeSkills.sort((a, b) => orderLang.indexOf(a.language_name) - orderLang.indexOf(b.language_name)).map((lang, index) => (
+            <Link to={'/skills'} key={index} className="skill__Card">
+               <article className="skill__home__card" >
+                  <h3 className="skill__home__h3">{lang.language_name}</h3>
+                  <img src={lang.language_icon && urlFor(lang.language_icon).url()} alt="" className="Skill__home__img" />
+               </article>
+            </Link>
          ))}
       </>
    );
 }
 export default SkillsCardHome;
- 

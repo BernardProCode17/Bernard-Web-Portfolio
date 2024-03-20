@@ -2,5 +2,6 @@
 background-color: blue;
 border-top-left-radius: 20px;
 border-top-right-radius: 20px;
+border-bottom: 1px solid #fff;
 width: 100%;
 }

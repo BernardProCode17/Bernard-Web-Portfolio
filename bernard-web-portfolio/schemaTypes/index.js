@@ -6,5 +6,6 @@ import language from './language'
 import facets from './facets'
 import media from './Media'
 import tool from './tool'
+import linksUrls from './linksUrls'
 
-export const schemaTypes = [paragraph, blockContent, singletext, projects, language, tool, facets, media]
+export const schemaTypes = [paragraph, blockContent, singletext, projects, language, tool, facets, media, linksUrls]

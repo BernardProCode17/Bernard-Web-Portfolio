@@ -1,0 +1,25 @@
+.skill__Card {
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   justify-content: center;
+   height: 37%;
+}
+
+.skill__home__card {
+   display: flex;
+   flex-direction: column;
+   justify-items: center;
+   justify-content: center;
+   text-align: center;
+   margin: 1rem auto;
+   padding: 1rem;
+   background: linear-gradient(145deg, #ffffff43, #CDCFD2);
+   border-radius: 13%;
+   box-shadow: 5.41px 5.41px 6px #95969949, -5.41px -5.41px 6px #FFFFFF;
+}
+
+.skill__home__img,
+.skill__home__h3 {
+   margin: 0rem auto;
+}
