@@ -1,9 +1,3 @@
 ## sanity start: start the sanity studio
 ## gulp watch: start the gulp watch of the sass files
 ## npm run dev to start the vite dev server
-
-///////
-
-Add accessibility Later
-
-sass --watch Sass/main.scss css/main.css

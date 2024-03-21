@@ -1,6 +1,8 @@
 import { defineField, defineType } from 'sanity'
 import { IoLinkSharp } from "react-icons/io5";
 export default defineType({
+
+
    name: "links_urls",
    title: 'Links & URLs',
    type: 'document',

@@ -1,19 +1,45 @@
 .bibleVerse {
    position: fixed;
-   top: 70%;
+   top: 50%;
    right: 0;
-   background-color: green;
+   background-color: rgba(0, 128, 0, 0.703);
    border-radius: 7px;
    border-top-right-radius: 0;
    border-bottom-right-radius: 0;
    z-index: 777;
+   width: 37px;
+   height: 199px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.bibleVerse p {
+/* increase the opcity on click and hover */
+/* .bibleVerse{
+   color: green;
+   transition: color 2ms;
+} */
+
+.bibleVerse-p {
    color: #fff;
    padding: 7px;
    writing-mode: vertical-rl;
    text-orientation: upright;
    margin: 0rem auto;
    text-align: center;
+}
+
+.BibleVerse-text {
+   color: #fff;
+   position: absolute;
+   top: 0;
+   right: 100%;
+   width: 700%;
+   background-color: green;
+   padding: 0.4375rem;
+   border-radius: 0.4375rem;
+   text-align: left;
+   margin: 7px;
+   height: 170px;
+   z-index: 1000000;
 }
