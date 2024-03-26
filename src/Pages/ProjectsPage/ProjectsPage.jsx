@@ -5,19 +5,18 @@ import ProjectCard from "../../Components/Card/ProjectCards";
 import ContactComp from "../../Components/Contact/Contact";
 import './ProjectsPages.css'
 import SectionHeader from '../../Components/Reusable/SectionHeader'
-import SectionFooter from '../../Components/Reusable/SectionFooter'
 
 function Projects() {
-   const { homeText } = useContext(GlobalContext)
-   // const title = 'Projects - Bernard Web Portfolio'
-   const title = <h1>{homeText?.[0]?.[0]?.textContent}</h1>
-   const subtitle = <p>{homeText?.[0]?.[1]?.textContent}</p>
+   const { homeText, icon_logo } = useContext(GlobalContext)
+   const title = <h1 className="projects__h1">{homeText?.[0]?.[0]?.textContent}</h1>
+   const subtitle = <p className="project__subtitle">{homeText?.[0]?.[1]?.textContent}</p>
 
    return (
       <>
-         <main className="project">
+         <main className="main__projects">
+            <SectionHeader title={title} subTitle={subtitle} logo={icon_logo}/>
 
-            <section>
+            <section className="projects__section">
                <ProjectCard />
             </section>
 

@@ -1,12 +1,16 @@
 import { createContext, useState, useEffect } from "react";
 import Client from "../Main Files/sanity";
 import ImageUrlBuilder from "@sanity/image-url";
+import icon_logo from '../assets/Logo Icon.svg'
 
 const GlobalContext = createContext();
 
 function Context({ children }) {
 
-   /* Create a function outside of the global context to do the fetch */
+   /* Varibales  */
+   const logo = icon_logo
+
+   /* UseEffect and Fetches */
 
    // Home Page Text Fetch
    const [homeText, setHomeText] = useState([]);
@@ -175,7 +179,7 @@ function Context({ children }) {
    }
 
    return (
-      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media, libraries, links }}>
+      <GlobalContext.Provider value={{ language, facet, shortProject, homeText, about, urlFor, media, libraries, links, logo }}>
          {children}
       </GlobalContext.Provider>
    )

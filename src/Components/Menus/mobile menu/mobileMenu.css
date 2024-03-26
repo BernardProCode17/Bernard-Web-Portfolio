@@ -1,10 +1,9 @@
+/* Mobile Header Home Pages */
 .header__mobile {
    display: flex;
    justify-content: space-between;
    width: 100%;
 }
-
-/* .header__logolink-mobile {} */
 
 .header__logo-mobile {
    width: 4.375rem;
@@ -35,4 +34,9 @@
    margin: 0;
    /* apply dropshadow */
    /* filter: drop-shadow(30px 54px 67px rgba(255, 255, 255, 0.321)) */
+}
+
+/* Mobile header - pages */
+.header__mobile--pages {
+   margin: 0rem auto;
 }

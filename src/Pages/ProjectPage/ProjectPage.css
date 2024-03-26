@@ -1,0 +1,82 @@
+.project__main {
+   width: 100%;
+
+   & h2,
+   p {
+      color: blue;
+   }
+}
+
+.project__main .project__image--project {
+   width: 100%;
+   margin: 1rem 0rem auto;
+}
+
+.project__main .project__article,
+.project__main .project__features,
+.project__main .project__DevLangTools,
+.project__main .project__links {
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* .project__main .project__article,
+.project__main .project__features,
+.project__main .project__DevLangTools,
+.project__main .project__links h2 {
+   color: aquamarine
+} */
+
+.project__main .project__article {
+   border-bottom: 0.1875rem solid blue;
+}
+
+.project__main .project__features h2 {
+   margin: 0rem auto;
+}
+.project__main .project__features ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 1rem;
+   margin: 0rem auto;
+   border-bottom: 0.1875rem solid blue;
+   color: blue;
+   list-style:decimal-leading-zero;
+}
+
+
+
+
+
+
+.project__main .project__DevLangTools {
+margin: 0rem;
+padding: 0rem;
+}
+
+
+.project__main .project__devLang ul , .project__main .project__devTools ul {
+   list-style: none;
+}
+
+.project__main .project__devLang ul {
+   padding: 0rem;
+   
+   & li {
+      margin: 0rem auto;
+   }
+}
+
+.project__main .project__devTools ul {
+margin: 0rem;
+padding: 0rem;
+}
+
+.project__main .project__links {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
