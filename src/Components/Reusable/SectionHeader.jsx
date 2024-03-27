@@ -3,12 +3,12 @@ import '../Reusable/SectionHeader.css'
 function SectionHeader({ title, subTitle, empty, logo }) {
 
    return (
-      <div className="section__header">
+      <section className="section__header">
          {logo && logo}
          {title}
          {subTitle}
          {empty && empty}
-      </div>)
+      </section>)
 }
 
 export default SectionHeader

@@ -36,6 +36,7 @@
 .project__main .project__features h2 {
    margin: 0rem auto;
 }
+
 .project__main .project__features ul {
    display: flex;
    flex-direction: column;
@@ -44,7 +45,7 @@
    margin: 0rem auto;
    border-bottom: 0.1875rem solid blue;
    color: blue;
-   list-style:decimal-leading-zero;
+   list-style: decimal-leading-zero;
 }
 
 
@@ -53,26 +54,33 @@
 
 
 .project__main .project__DevLangTools {
-margin: 0rem;
-padding: 0rem;
+   margin: 0rem;
+   padding: 0rem;
+
+   & h2 {
+      text-align: center;
+   }
 }
 
 
-.project__main .project__devLang ul , .project__main .project__devTools ul {
+.project__main .project__devLang ul,
+.project__main .project__devTools ul {
    list-style: none;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   width: 75%;
+   margin: 0rem auto;
+   padding: 0rem;
 }
 
 .project__main .project__devLang ul {
    padding: 0rem;
-   
+
    & li {
       margin: 0rem auto;
    }
-}
-
-.project__main .project__devTools ul {
-margin: 0rem;
-padding: 0rem;
 }
 
 .project__main .project__links {

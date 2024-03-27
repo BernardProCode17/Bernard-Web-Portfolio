@@ -14,14 +14,14 @@
    z-index: 2;
 }
 
-.header__mobile-toggle {
-  background-color: rgb(245, 245, 245, 0.3);
+.header__mobile--toggle {
+  background-color: transparent;
   border: none;
   border-radius: 0.4375rem;
    width: max-content;
    height: auto;
-   top: 599px;
-   right: 0.4375rem;
+   top: 40.625rem;
+   right: 0px;
    position: fixed;
 }
 .header__mobile-title{

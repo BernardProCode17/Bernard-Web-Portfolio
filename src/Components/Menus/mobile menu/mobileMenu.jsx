@@ -20,8 +20,7 @@ function MobileMenu() {
                <img src={icon_logo} alt="" className='header__logo-mobile' />
             </Link>         
 
-         <button onClick={toggleMenu} aria-label='navigation menu toggle' className='header__mobile-toggle' >
-            {/* <p className='header__mobile-title'>Menu</p> */}
+         <button onClick={toggleMenu} aria-label='navigation menu toggle' className='header__mobile--toggle' >
             <img src={menuIcon} alt="" className='header__svg' />
          </button>
 
