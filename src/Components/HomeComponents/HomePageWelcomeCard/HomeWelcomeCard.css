@@ -2,7 +2,7 @@
 
 .welcome {
    background-color: rgba(255, 255, 255, 0.8999999761581421);
-   border-radius: 10px;
+   border-radius: 0.625rem;
    margin: 1rem;
    padding: 1rem;
    position: absolute;
@@ -10,10 +10,27 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: start;
-   background: linear-gradient(145deg, #FFFFFF, rgba(205, 207, 210, 0.784));
-   border-radius: 13%;
-   box-shadow: 5.41px 5.41px 6px rgba(149, 150, 153, 0.5), -5.41px -5.41px 6px rgba(255, 255, 255, 0.3);
+   align-items: center;
+   border-radius: 0.625rem;
+   box-shadow: 5px -5px 20px #0000ff1e,
+      -5px -5px 20px #0000ff1e;
+}
+
+@media(min-width: 520px) {
+   .welcome {
+      max-width: 34.375rem;
+   }
+}
+
+@media(min-width: 521px) {
+   .welcome {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      margin: 0rem auto
+   }
 }
 
 .welcome p {
@@ -23,12 +40,18 @@
 
 .welcome__h1 {
    font-family: sans-serif;
+   text-align: center;
+   width: 100%;
 }
 
 .welcome__title {
    font-family: sans-serif;
+   text-align: center;
+   width: 100%;
 }
 
 .welcome__skills {
    font-family: 'source code';
+   text-align: center;
+   width: 100%;
 }

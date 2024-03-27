@@ -14,9 +14,11 @@
    text-align: center;
    margin: 1rem auto;
    padding: 1rem;
-   background: linear-gradient(145deg, #ffffff43, #CDCFD2);
-   border-radius: 13%;
-   box-shadow: 5.41px 5.41px 6px #95969949, -5.41px -5.41px 6px #FFFFFF;
+   border-radius: 0.625rem;
+   box-shadow: 5px -5px 20px #0000ff1e,
+      -5px -5px 20px #0000ff1e;
+
+
 }
 
 .skill__home__img,
